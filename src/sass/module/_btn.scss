@@ -1,0 +1,68 @@
+@use 'global' as *;
+// ボタンのベース
+.btn {
+  display: inline-block;
+  padding: rem(15) rem(88) rem(15) rem(39);
+  min-width: rem(202);
+  border: 1px solid $color-accent;
+  background-color: $color-accent;
+  color: $white;
+  font-size: rem(14);
+  line-height: calc(22/14);
+  font-family: $font-gotu;
+  font-weight: $normal;
+  text-align: center;
+  position: relative;
+  transition: .3s;
+}
+
+.btn:hover {
+  color: $color-accent;
+  background-color: $white;
+}
+
+// ボタンのズレた枠線
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: rem(4);
+  left: rem(4);
+  width: calc(100% - #{rem(-2)});
+  height: calc(100% - #{rem(-1)});
+  border: 1px solid $color-accent;
+  background-color: transparent;
+}
+
+// ボタンの矢印
+.btn span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: rem(39);
+  transform: translateY(calc(-50% - #{rem(3)})) rotate(45deg);
+  width: rem(9);
+  height: 1px;
+  background-color: $white;
+  transition: .3s;
+}
+
+.btn span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: rem(40);
+  transform: translateY(-50%);
+  width: rem(40);
+  height: 1px;
+  background-color: $white;
+  transition: .3s;
+}
+
+.btn:hover span::before,
+.btn:hover span::after {
+  background-color: $color-accent;
+}
+
