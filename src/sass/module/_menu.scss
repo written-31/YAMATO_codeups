@@ -1,0 +1,64 @@
+@use 'global' as *;
+.menu {
+  display: flex;
+  gap: rem(16);
+
+  @include mq('md') {
+    gap: rem(120);
+  }
+  // justify-content: space-between;
+}
+
+.menu__wrapper {
+  @include mq('md') {
+    display: contents;
+  }
+}
+
+.menu__block:not(:first-child) {
+  margin-top: rem(33);
+
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+
+.menu__list:not(:first-child) {
+  margin-top: rem(33);
+
+  @include mq('md') {
+    margin-top: rem(33);
+  }
+}
+
+.menu__item {
+  padding-left: rem(22);
+  position: relative;
+}
+
+.menu__item:not(:first-child) {
+  margin-top: rem(18);
+}
+
+.menu__item a {
+  color: $white;
+  font-weight: $normal;
+  font-size: rem(16);
+  line-height: calc(18/16);
+  // display: inline-block;
+}
+
+
+.menu__item.menu__item--first a {
+  font-weight: $bold;
+}
+
+.menu__item.menu__item--first::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(3);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/icon_hitode.svg);
+}

@@ -22,43 +22,17 @@
   min-height: 80vh;
   overflow-y: auto;
   padding-bottom: rem(50);
-  display: flex;
-  gap: rem(7);
-}
 
-.header-content__list:not(:first-child) {
-  margin-top: rem(33);
-}
-
-.header-content__item {
-  padding-left: rem(22);
-  position: relative;
-}
-
-.header-content__item:not(:first-child) {
-  margin-top: rem(18);
-}
-
-.header-content__item a {
-  color: $white;
-  font-weight: $normal;
-  font-size: rem(16);
-  line-height: calc(18/16);
-  // display: inline-block;
-}
-
-.header-content__item.header-content__item--first a {
-  font-weight: $bold;
 }
 
 
 
-.header-content__item.header-content__item--first::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: rem(3);
-  width: rem(18);
-  height: rem(18);
-  background-image: url(../images/icon_hitode.svg);
-}
+
+
+
+
+
+
+
+
+
