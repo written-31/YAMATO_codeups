@@ -1,4 +1,41 @@
 @use 'global' as *;
+.voice {
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  position: relative;
+
+  @include mq('md') {
+    padding-top: rem(140);
+    padding-bottom: rem(140);
+  }
+}
+
+.voice::before {
+  @include mq('md') {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background: url(../images/fish_right.png) no-repeat center / cover;
+    top: rem(20);
+    left: rem(100);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.voice::after {
+  @include mq('md') {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background: url(../images/tatsu.png) no-repeat center / cover;
+    right: rem(180);
+    bottom: rem(73);
+    width: rem(71);
+    height: rem(162);
+  }
+}
+
 .voice-card {
   display: block;
   padding: rem(16) rem(16) rem(24);
@@ -11,10 +48,12 @@
 
 .voice-card__wrapper {
   display: grid;
-  gap: rem(40);
+  gap: rem(37);
+  margin-top: rem(44);
 
   @include mq('md') { 
     grid-template-columns: repeat(2, 1fr);
+    margin-top: rem(31);
   }
 }
 
@@ -28,7 +67,7 @@
   margin-right: rem(13);
   
   @include mq('md') {
-    width: calc((276 / 427) * 100%);
+    width: calc((276 / 472) * 100%);
     margin-right: rem(16);
   }
 }
@@ -66,6 +105,7 @@
 }
 
 .voice-card__title {
+  color: $color-main;
   font-weight: $regular;
   font-size: rem(16);
   line-height: calc(23.17/16);
@@ -81,11 +121,7 @@
 }
 
 .voice-card__thumb {
-  width: calc((151 / 313) * 100%);
-  
-  @include mq('md') {
-    width: calc((180 / 427) * 100%);
-  }
+  flex: 1;
 }
 
 .voice-card__thumb img {
