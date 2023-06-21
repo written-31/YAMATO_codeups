@@ -6,7 +6,6 @@
   line-height: calc(40/32);
   text-align: center;
   color: $color-main;
-  text-shadow: (0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25));
 
   @include mq('md') {
     font-size: rem(40);
@@ -26,9 +25,27 @@
   line-height: calc(18/12);
   color: $color-accent;
   margin-top: rem(4);
-  text-shadow: none;
+  text-align: center;
 
   @include mq('md') {
     margin-top: rem(8);
+  }
+}
+
+.section-title--lg {
+  font-size: rem(80);
+  line-height: 1;
+  
+  @include mq('md') {
+    font-size: rem(80);
+    line-height: 1;
+  }
+}
+
+.section-title--lg::after {
+  margin-top: rem(-8);
+  
+  @include mq('md') {
+    margin-top: rem(-8);
   }
 }
