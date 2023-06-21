@@ -14,24 +14,15 @@
   text-align: center;
   position: relative;
   transition: .3s;
+  box-shadow: #fff rem(4) rem(4) 0 0, $color-accent rem(4) rem(4) 0 rem(1);
+
 }
 
 .btn:hover {
-  color: $color-accent;
-  background-color: $white;
-}
-
-// ボタンのズレた枠線
-.btn::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: rem(4);
-  left: rem(4);
-  width: calc(100% - #{rem(-2)});
-  height: calc(100% - #{rem(-1)});
-  border: 1px solid $color-accent;
-  background-color: transparent;
+  @include mq('md') {
+    color: $color-accent;
+    background-color: $white;
+  }
 }
 
 // ボタンの矢印
@@ -63,6 +54,12 @@
 
 .btn:hover span::before,
 .btn:hover span::after {
-  background-color: $color-accent;
+  @include mq('md') {
+    background-color: $color-accent;
+  }
 }
+
+
+
+
 

@@ -5,7 +5,7 @@
 
 
   @include mq('md') {
-    padding: rem(80) 0;
+    padding: rem(80) rem(25);
   }
 }
 
@@ -86,7 +86,7 @@
 
   @include mq('md') {
     margin-top: rem(77);
-    margin-left: rem(88);
+    // margin-left: rem(88);
     font-size: rem(16);
   }
 }

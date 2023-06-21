@@ -1,0 +1,118 @@
+@use 'global' as *;
+.price {
+  background-color: $bg-accent;
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  padding-right: rem(15);
+  padding-left: rem(16);
+
+  
+  @include mq('md') {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+    padding-right: rem(182);
+    padding-left: rem(181);
+    position: relative;
+  }
+}
+
+.price::before {
+  @include mq('md') {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background: url(../images/fish.png) no-repeat center / cover;
+    width: rem(437);
+    height: rem(201);
+    left: rem(100);
+    bottom: rem(60);
+  }
+}
+
+.price__wrapper {
+
+  @include mq('md') {
+    max-width: rem(1077);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: rem(93);
+    margin-top: rem(40);
+  }
+}
+
+.price__thumb {
+  margin-top: rem(24);
+
+  @include mq('md') {
+    margin-top: 0;
+    flex: 1;
+  }
+}
+
+.price__thumb img {
+  aspect-ratio: 345/227;
+  object-fit: cover;
+
+  @include mq('md') {
+    aspect-ratio: 492/746;
+  }
+}
+
+.price__list {
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: 0;
+    flex: 1;
+  }
+}
+
+.price__item:not(:first-child) {
+  margin-top: rem(39);
+}
+
+.price__sub-title {
+  font-weight: $bold;
+  font-size: rem(16);
+  line-height: calc(24/16);
+  color: $color-main;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $color-accent;
+  width: 100%;
+}
+
+.price__entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: rem(8);
+}
+
+.price__name,
+.price__value {
+  font-weight: $normal;
+  font-size: rem(14);
+  line-height: calc(24/14);
+  color: $color-main;
+
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc(24/16);
+  }
+}
+
+.price__btn {
+  text-align: center;
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.btn {
+
+}
+
