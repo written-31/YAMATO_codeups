@@ -32,6 +32,18 @@
   }
 }
 
+.section-title--white {
+  color: $white;
+}
+
+.section-title--white::first-letter {
+  color: $white;
+}
+
+.section-title--white::after {
+  color: $white;
+}
+
 .section-title--lg {
   font-size: rem(80);
   line-height: 1;
