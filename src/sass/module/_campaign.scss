@@ -1,13 +1,25 @@
 @use 'global' as *;
+.campaign {
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  overflow-x: hidden;
+
+  @include mq('md') {
+    padding-top: rem(120);
+    padding-bottom: rem(45);
+  }
+}
+
 .campaign-card {
   display: block;
   box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 0.25);
-  // width: 333px;
+  height: 100%;
 }
 
-
-.campaign-card__thumb {
+.campaign-card__content {
+  // display: block;
 }
+
 .campaign-card__thumb img {
   aspect-ratio: 280/188;
   object-fit: cover;
@@ -64,6 +76,7 @@
     font-size: rem(16);
     line-height: calc(24/16);
     margin-top: rem(16);
+    padding-right: rem(12);
   }
 }
 
@@ -72,6 +85,9 @@
   text-align: center;
   font-family: $font-lato;
   line-height: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .campaign-card__discount-before {
@@ -80,6 +96,7 @@
   font-size: rem(20);
   margin-right: rem(16);
   position: relative;
+  display: inline-block;
 
   @include mq('md') {
     font-size: rem(24);
@@ -101,9 +118,95 @@
   color: $color-accent;
   font-weight: $bold;
   font-size: rem(32);
+  display: inline-block;
 
   @include mq('md') {
     font-size: rem(40);
+  }
+}
+
+.campaign__btn {
+  text-align: center;
+  margin-top: rem(35);
+
+  @include mq('md') {
+    margin-top: rem(75);
+  }
+}
+
+
+// swiper
+
+.campaign__swiper-box {
+
+  @include mq('md') {
+    position: relative;
+    margin-left: rem(5);
+  }
+}
+
+.campaign__swiper {
+  margin-top: rem(27);
+  margin-right: calc(100% - 100vw);
+  height: 100%;
+  padding-bottom: rem(5);
+  padding-left: rem(2);
+
+  @include mq('md') {
+    margin-top: rem(40);
+    margin-left: rem(-6);
+  }
+}
+
+.swiper-button-box {
+  @include mq('md') {
+    display: flex;
+    align-items: center;
+    gap: rem(100);
+    position: absolute;
+    top: rem(-85);
+    right: rem(-10);
+  }
+}
+
+.campaign__prev,
+.campaign__next {
+  @include mq('md') {
+    width: rem(80);
+    height: rem(80);
+    display: inline-block;
+    border-radius: rem(100);
+    border: 1px solid $color-accent;
+    position: relative;
+    background-color: $white;
+  }
+}
+
+
+
+.campaign__prev::before,
+.campaign__next::before {
+  @include mq('md') {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: rem(40);
+    height: rem(8);
+  }
+}
+
+.campaign__prev::before {
+  @include mq('md') {
+    background: url(../images/icon-arrow_left-green.svg) no-repeat center center / cover;
+  }
+}
+
+.campaign__next::before {
+  @include mq('md') {
+    background: url(../images/icon-arrow_right-green.svg) no-repeat center center / cover;
   }
 }
 

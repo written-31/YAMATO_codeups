@@ -16,6 +16,39 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
   });
 
+  // campaignスライダー
+  const swiper2 = new Swiper('#slide2', {
+
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1.31,
+        spaceBetween: 24
+      },
+      // when window width is >= 640px
+      768: {
+        slidesPerView: 3.5,
+        spaceBetween: 24
+      },
+      1440: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+
+    }
+  });
+
   //ハンバーガーメニュー
   $('.js-hamburer').on('click', function() {
     $(this).toggleClass('open');
