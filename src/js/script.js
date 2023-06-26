@@ -35,6 +35,10 @@ jQuery(function ($) {
         slidesPerView: 1.31,
         spaceBetween: 24,
       },
+      425: {
+        slidesPerView: 1.7,
+        spaceBetween: 24,
+      },
       // when window width is >= 640px
       768: {
         slidesPerView: 3.5,
