@@ -1,10 +1,28 @@
 @use 'global' as *;
 .section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title__main {
+  font-family: $font-main;
+  font-weight: $normal;
+  font-size: rem(12);
+  line-height: calc(18/12);
+  color: $color-accent;
+  margin-top: rem(4);
+
+  @include mq('md') {
+    margin-top: rem(8);
+  }
+}
+
+.section-title__sub {
   font-family: $font-gotu;
   font-weight: $normal;
   font-size: rem(32);
   line-height: calc(40/32);
-  text-align: center;
   color: $color-main;
 
   @include mq('md') {
@@ -13,51 +31,33 @@
   }
 }
 
-.section-title::first-letter {
+.section-title__sub::first-letter {
   color: $color-accent;
 }
 
-.section-title::after {
-  content: attr(data-ja);
-  display: block;
-  font-family: $font-main;
-  font-size: rem(12);
-  line-height: calc(18/12);
-  color: $color-accent;
-  margin-top: rem(4);
-  text-align: center;
 
-  @include mq('md') {
-    margin-top: rem(8);
-  }
-}
-
-.section-title--white {
+// カラーのモディファイア
+.section-title__main--white {
   color: $white;
 }
 
-.section-title--white::first-letter {
+.section-title__sub--white {
   color: $white;
 }
 
-.section-title--white::after {
+.section-title__sub--white.section-title__sub::first-letter {
   color: $white;
 }
 
-.section-title--lg {
+
+// フォントサイズのモディファイア
+.section-title__sub--lg {
   font-size: rem(80);
   line-height: 1;
-  
+
   @include mq('md') {
     font-size: rem(80);
     line-height: 1;
   }
 }
 
-.section-title--lg::after {
-  margin-top: rem(-8);
-  
-  @include mq('md') {
-    margin-top: rem(-8);
-  }
-}

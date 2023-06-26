@@ -101,6 +101,9 @@
 
 .header__item:not(:first-child) {
   @include mq('md') {
+    margin-left: rem(25);
+  }
+  @include mq('lg') {
     margin-left: rem(40);
   }
 }
@@ -113,6 +116,11 @@
     height: inherit;
     text-align: center;
     position: relative;
+  }
+}
+.header__link:hover {
+  @include mq('md') {
+    opacity: 1;
   }
 }
 

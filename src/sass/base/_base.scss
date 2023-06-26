@@ -41,3 +41,16 @@
   }
 }
 
+
+// ホバー
+a,
+button {
+  transition: .3s;
+  &:hover {
+    opacity: 1;
+    @include mq(md) {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+}

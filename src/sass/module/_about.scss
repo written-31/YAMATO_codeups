@@ -1,11 +1,11 @@
 @use 'global' as *;
 .about {
-  padding-top: rem(40);
+  padding-top: rem(45);
   padding-bottom: rem(83);
   
   @include mq('md') {
     padding-top: rem(100);
-    padding-bottom: rem(140);
+    padding-bottom: rem(138);
     position: relative;
   }
 }
@@ -25,10 +25,13 @@
 }
 
 .about__wrapper {
+  // max-width: rem(600);
+  // width: 100%;
+  // margin: 0 auto;
   margin-top: rem(27);
 
   @include mq('md') {
-    margin-top: rem(40);
+    margin-top: rem(38);
     position: relative;
   }
 }
@@ -75,7 +78,7 @@
     left: rem(199);
     top: rem(200);
     z-index: 3;
-    margin-top: 0;
+    margin-top: rem(3);
   }
 }
 

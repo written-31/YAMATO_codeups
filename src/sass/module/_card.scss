@@ -6,6 +6,10 @@
   background-color: $white;
 }
 
+.card__thumb {
+  background-color: $white;
+}
+
 .card__thumb img {
   aspect-ratio: 301/201;
   object-fit: cover;
@@ -13,6 +17,10 @@
 
 .card__body {
   margin-top: rem(24);
+
+  @include mq('md') {
+    margin-top: rem(23);
+  }
 }
 
 .card__date {

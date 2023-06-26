@@ -1,0 +1,43 @@
+@use 'global' as *;
+.pagetop {
+  border-radius: rem(100);
+  border: 1px solid $color-accent;
+  position: relative;
+  position: fixed;
+  z-index: 100;
+  width: rem(48);
+  height: rem(48);
+  bottom: rem(16);
+  right: rem(15);
+  transition: .3s;
+
+  @include mq('md') {
+    width: rem(80);
+    height: rem(80);
+    bottom: rem(20);
+    right: rem(20);
+  }
+}
+
+.pagetop svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(6);
+  height: rem(28);
+  transform: translate(calc(50% - #{rem(6)}), -50%);
+
+  @include mq('md') {
+    height: rem(40);
+  }
+}
+
+
+// footer .pagetop {
+//   border: 1px solid $color-accent;
+
+// }
+
+// footer .pagetop.active {
+//   border: 1px solid $white;
+// }
