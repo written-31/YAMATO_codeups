@@ -36,13 +36,9 @@
   color: $white;
   text-align: center;
   position: absolute;
+  width: 100%;
   top: 50%;
-  left: 50%;
-  transform: translate(-50% , -50%);
-
-  @include mq('md') {
-    margin-top: rem(43);
-  }
+  transform: translateY(-18%);
 }
 
 .fv-swiper__text-main {

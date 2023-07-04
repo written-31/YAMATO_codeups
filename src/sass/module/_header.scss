@@ -1,11 +1,8 @@
 @use 'global' as *;
 .header {
   height: rem(80);
-  padding: 0 rem(15);
   background-color: rgba($color: #0D2936 , $alpha: 0.68);
   width: 100%;
-  display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,6 +10,16 @@
 
   @include mq('md') {
     height: rem(90);
+  }
+}
+
+.header__inner {
+  padding: 0 rem(15);
+  display: flex;
+  align-items: center;
+  height: inherit;
+
+  @include mq('md') {
     padding: 0 rem(40);
   }
 }
@@ -99,15 +106,6 @@
   }
 }
 
-.header__item:not(:first-child) {
-  @include mq('md') {
-    margin-left: rem(25);
-  }
-  @include mq('lg') {
-    margin-left: rem(40);
-  }
-}
-
 .header__link {
   @include mq('md') {
     display: flex;
@@ -116,8 +114,35 @@
     height: inherit;
     text-align: center;
     position: relative;
+    padding-left: rem(12);
+    padding-right: rem(13);
+  }
+
+  @include mq('lg') {
+    padding-left: rem(20);
+    padding-right: rem(20);
   }
 }
+
+.header__item:first-child .header__link {
+  @include mq('md') {
+    padding-left: 0;
+  }
+  @include mq('lg') {
+    padding-left: 0;
+  }
+}
+
+.header__item:last-child .header__link {
+  @include mq('md') {
+    padding-right: 0;
+  }
+  @include mq('lg') {
+    padding-right: 0;
+  }
+}
+
+
 .header__link:hover {
   @include mq('md') {
     opacity: 1;
@@ -127,11 +152,11 @@
 .header__link::after {
   @include mq('md') {
     content: "";
+    display: block;
     position: absolute;
     bottom: rem(23);
-    left: 0;
     /*線の形状*/
-    width: 100%;
+    width: calc(100% - #{rem(25)});
     height: 1px;
     background: $white;
     /*アニメーションの指定*/
@@ -139,10 +164,33 @@
     transform: scale(0, 1);/*X方向0、Y方向1*/
     transform-origin: center top;/*上部中央基点*/
   }
+
+  @include mq('lg') {
+    width: calc(100% - #{rem(40)});
+  }
 }
 .header__link:hover::after {
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
+
+.header__item:first-child .header__link::after {
+  @include mq('md') {
+    width: calc(100% - #{rem(13)});
+  }
+  @include mq('lg') {
+    width: calc(100% - #{rem(20)});
+  }
+}
+
+.header__item:last-child .header__link::after {
+  @include mq('md') {
+    width: calc(100% - #{rem(13)});
+  }
+  @include mq('lg') {
+    width: calc(100% - #{rem(20)});
+  }
+}
+
 
 .header__link-en {
   display: block;
