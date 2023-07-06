@@ -15,7 +15,7 @@
 .blog::before {
   @include mq('md') {
     content: "";
-    background: url(../images/blog_bg.jpg) center / cover no-repeat;
+    background: url(../images/common/blog_bg.jpg) center / cover no-repeat;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -31,9 +31,9 @@
     position: absolute;
     display: inline-block;
     content: "";
-    background: url(../images/fish_white.png) no-repeat center / cover;
+    background: url(../images/common/fish_white.png) no-repeat center / cover;
     top: rem(24);
-    left: rem(100);
+    left: calc(50% - min(50vw , rem(615)));
     width: rem(437);
     height: rem(201);
   }

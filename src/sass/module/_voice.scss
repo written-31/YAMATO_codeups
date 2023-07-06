@@ -5,7 +5,7 @@
   position: relative;
 
   @include mq('md') {
-    padding-top: rem(140);
+    padding-top: rem(144);
     padding-bottom: rem(145);
   }
 }
@@ -15,9 +15,9 @@
     position: absolute;
     display: inline-block;
     content: "";
-    background: url(../images/fish_right.png) no-repeat center / cover;
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
     top: rem(20);
-    left: rem(100);
+    left: calc(50% - min(50vw , rem(617)));
     width: rem(301);
     height: rem(138);
   }
@@ -28,8 +28,8 @@
     position: absolute;
     display: inline-block;
     content: "";
-    background: url(../images/tatsu.png) no-repeat center / cover;
-    right: rem(180);
+    background: url(../images/common/tatsu.png) no-repeat center / cover;
+    right: calc(50% - min(50vw , rem(618)));
     bottom: rem(73);
     width: rem(71);
     height: rem(162);

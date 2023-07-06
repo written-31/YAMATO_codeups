@@ -228,13 +228,13 @@
 
 .campaign__prev::before {
   @include mq('md') {
-    background: url(../images/icon-arrow_left-green.svg) no-repeat center center / cover;
+    background: url(../images/common/icon-arrow_left-green.svg) no-repeat center center / cover;
   }
 }
 
 .campaign__next::before {
   @include mq('md') {
-    background: url(../images/icon-arrow_right-green.svg) no-repeat center center / cover;
+    background: url(../images/common/icon-arrow_right-green.svg) no-repeat center center / cover;
   }
 }
 

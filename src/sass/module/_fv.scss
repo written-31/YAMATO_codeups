@@ -38,7 +38,11 @@
   position: absolute;
   width: 100%;
   top: 50%;
-  transform: translateY(-18%);
+  transform: translateY(-50%);
+
+  @include mq('md') { 
+    transform: translateY(-18%);
+  }
 }
 
 .fv-swiper__text-main {
