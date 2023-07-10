@@ -1,13 +1,6 @@
 @use 'global' as *;
 .voice {
-  padding-top: rem(80);
-  padding-bottom: rem(85);
   position: relative;
-
-  @include mq('md') {
-    padding-top: rem(144);
-    padding-bottom: rem(145);
-  }
 }
 
 .voice::before {
@@ -16,8 +9,8 @@
     display: inline-block;
     content: "";
     background: url(../images/common/fish_right.png) no-repeat center / cover;
-    top: rem(20);
-    left: calc(50% - min(50vw , rem(617)));
+    top: rem(-120);
+    left: calc(50% - min(49vw , rem(617)));
     width: rem(301);
     height: rem(138);
   }
@@ -29,8 +22,8 @@
     display: inline-block;
     content: "";
     background: url(../images/common/tatsu.png) no-repeat center / cover;
-    right: calc(50% - min(50vw , rem(618)));
-    bottom: rem(73);
+    right: calc(50% - min(49vw , rem(540)));
+    bottom: rem(-70);
     width: rem(71);
     height: rem(162);
   }

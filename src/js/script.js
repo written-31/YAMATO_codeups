@@ -19,10 +19,10 @@ jQuery(function ($) {
   // campaignスライダー
   const swiper2 = new Swiper("#slide2", {
     loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: false,
+    // },
 
     navigation: {
       nextEl: ".swiper-button-next",
@@ -32,7 +32,7 @@ jQuery(function ($) {
     breakpoints: {
       // when window width is >= 320px
       320: {
-        slidesPerView: 1.31,
+        slidesPerView: 1.25,
         spaceBetween: 24,
       },
       425: {
@@ -45,7 +45,7 @@ jQuery(function ($) {
         spaceBetween: 24,
       },
       1440: {
-        slidesPerView: 4,
+        slidesPerView: 3.5,
         spaceBetween: 40,
       },
     },
@@ -143,20 +143,6 @@ jQuery(function ($) {
 
 
 
-  // function matchHeight(elements) {
-  //   const target = Array.from(document.querySelectorAll(elements));
-  //   const heightList = [];
-  //   target.forEach(element => {
-  //    const height = element.clientHeight;
-  //    heightList.push(height);
-  //   });
-  //   const maxHeight = Math.max.apply(null,heightList);
-  //   target.forEach(element => {
-  //    element.style.height = maxHeight + 'px'; // 最大高さに揃える
-  //   });
-  //  }
-   
-  //  matchHeight('.campaign-card__body');
 
 });
 

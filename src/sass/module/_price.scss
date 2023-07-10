@@ -3,15 +3,10 @@
   background-color: $bg-accent;
   padding-top: rem(80);
   padding-bottom: rem(85);
-  // padding-right: rem(15);
-  // padding-left: rem(16);
-
   
   @include mq('md') {
     padding-top: rem(99);
     padding-bottom: rem(104);
-    // padding-right: rem(182);
-    // padding-left: rem(181);
     position: relative;
   }
 }
@@ -24,7 +19,7 @@
     background: url(../images/common/fish.png) no-repeat center / cover;
     width: rem(437);
     height: rem(201);
-    left: calc(50% - min(50vw , rem(618)));
+    left: calc(50% - min(49vw , rem(618)));
     bottom: rem(60);
   }
 }
