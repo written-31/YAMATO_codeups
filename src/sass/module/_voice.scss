@@ -29,15 +29,6 @@
   }
 }
 
-.voice-card {
-  display: block;
-  padding: rem(16) rem(16) rem(24);
-  box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 0.25);
-
-  @include mq('md') {
-    padding: rem(24);
-  }
-}
 
 .voice__wrapper {
   display: grid;
@@ -54,96 +45,5 @@
   }
 }
 
-.voice-card__head {
-  display: flex;
-  justify-content: space-between;
-}
 
-.voice-card__content {
-  width: calc((149 / 313) * 100%);
-  margin-right: rem(13);
-  
-  @include mq('md') {
-    width: calc((276 / 472) * 100%);
-    margin-right: rem(16);
-  }
-}
-
-.voice-card__info {
-  @include mq('md') {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: rem(24);
-  }
-}
-
-.voice-card__age {
-  font-weight: $normal;
-  font-size: rem(12);
-  line-height: calc(18/12);
-  color: $color-main;
-  display: block;
-}
-
-.voice-card__category {
-  padding: rem(3) rem(11);
-  margin-left: auto;
-  font-weight: $normal;
-  font-size: rem(12);
-  line-height: calc(22/12);
-  background-color: $white;
-  color: $color-accent;
-  border: 1px solid $color-accent;
-  display: inline-block;
-
-  @include mq('md') {
-    padding: rem(5) rem(15);
-  }
-}
-
-.voice-card__title {
-  color: $color-main;
-  font-weight: $regular;
-  font-size: rem(16);
-  line-height: calc(23.17/16);
-  margin-top: rem(4);
-  padding-bottom: rem(4);
-  border-bottom: 1px solid $color-accent;
-
-  @include mq('md') {
-    font-size: rem(24);
-    line-height: calc(34.75/24);
-    margin-top: rem(8);
-  }
-}
-
-.voice-card__thumb {
-  flex: 1;
-}
-
-.voice-card__thumb img {
-  aspect-ratio: 151/117;
-  object-fit: cover;
-  height: 100%;
-  
-  @include mq('md') {
-    aspect-ratio: 180/140;
-  }
-}
-
-.voice-card__body {
-  margin-top: rem(16);
-
-  @include mq('md') {
-    margin-top: rem(40);
-  }
-}
-
-.voice-card__text {
-  font-weight: $normal;
-  font-size: rem(16);
-  line-height: calc(24/16);
-  color: $black;
-}
 

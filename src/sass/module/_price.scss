@@ -51,16 +51,22 @@
   }
 }
 
-.price__thumb img {
+.price__thumb picture {
   aspect-ratio: 345/227;
-  object-fit: cover;
 
   @include mq('md') {
     aspect-ratio: 492/746;
   }
 }
 
-.price__list {
+.price__thumb picture source,
+.price__thumb picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price__items {
   margin-top: rem(40);
 
   @include mq('md') {

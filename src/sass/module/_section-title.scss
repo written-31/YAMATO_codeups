@@ -38,15 +38,21 @@
 
 // カラーのモディファイア
 .section-title__main--white {
-  color: $white;
+  @include mq('md') {
+    color: $white;
+  }
 }
 
 .section-title__sub--white {
-  color: $white;
+  @include mq('md') {
+    color: $white;
+  }
 }
 
 .section-title__sub--white.section-title__sub::first-letter {
-  color: $white;
+  @include mq('md') {
+    color: $white;
+  }
 }
 
 

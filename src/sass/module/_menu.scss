@@ -23,7 +23,7 @@
   }
 }
 
-.menu__list:not(:first-child) {
+.menu__items:not(:first-child) {
   margin-top: rem(33);
 
   @include mq('md') {
@@ -61,5 +61,5 @@
   top: rem(3);
   width: rem(18);
   height: rem(18);
-  background-image: url(../images/icon_hitode.svg);
+  background-image: url(../images/common/icon_hitode.svg);
 }

@@ -90,7 +90,7 @@
   }
 }
 
-.header__list {
+.header__items {
   @include mq('md') {
     display: flex;
     align-items: center;

@@ -2,7 +2,7 @@ jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
   // 呼び出しの基本：
-  const swiper = new Swiper("#slide1", {
+  const swiper = new Swiper(".js-fv-slider", {
     // ここにオプション設定が入ります
     direction: "horizontal",
     loop: true,
@@ -17,7 +17,7 @@ jQuery(function ($) {
   });
 
   // campaignスライダー
-  const swiper2 = new Swiper("#slide2", {
+  const swiper2 = new Swiper(".js-campaign-slider", {
     loop: true,
     // autoplay: {
     //   delay: 4000,
