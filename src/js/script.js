@@ -19,10 +19,10 @@ jQuery(function ($) {
   // campaignスライダー
   const swiper2 = new Swiper(".js-campaign-slider", {
     loop: true,
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
 
     navigation: {
       nextEl: ".swiper-button-next",
