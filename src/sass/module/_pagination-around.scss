@@ -1,0 +1,30 @@
+@use 'global' as *;
+.pagination-around {
+  
+}
+
+.pagination-around__items {
+  display: flex;
+  align-items: center;
+  gap: rem(82);
+}
+
+.pagination-around__item {
+  width: rem(38);
+  height: rem(38);
+  display: grid;
+  place-content: center;
+  border: 1px solid $color-accent;
+  color: $color-accent;
+  transition: .3s;
+  font-weight: $bold;
+
+}
+
+.pagination-around__item:hover {
+  @include mq('md') {
+    color: $white;
+    background-color: $color-accent;
+    opacity: 1;
+  }
+}

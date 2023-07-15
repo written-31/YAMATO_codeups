@@ -29,6 +29,7 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  background-color: $white;
   
   @include mq('md') {
     padding: rem(24) rem(16) rem(40);
@@ -88,7 +89,7 @@
 
 
 
-.campaign-card__text {
+.campaign-card__all {
   display: block;
   color: $color-main;
   text-align: center;
@@ -150,5 +151,47 @@
   @include mq('md') {
     font-size: rem(40);
     margin-left: rem(24);
+  }
+}
+
+
+// campaignページ
+.campaign-card__footer {
+  @include mq('md') {
+    margin-top: rem(24);
+  }
+}
+.campaign-card__text {
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc(24/16);
+  }
+
+}
+
+.campaign-card__date {
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: calc(18/16);
+    color: $color-accent;
+    text-align: center;
+    margin-top: rem(32);
+  }
+}
+
+.campaign-card__contact {
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: calc(18/14);
+    margin-top: rem(7);
+    color: $color-accent;
+    text-align: center;
+  }
+}
+
+.campaign-card__btn {
+  @include mq('md') {
+    text-align: center;
+    margin-top: rem(16);
   }
 }

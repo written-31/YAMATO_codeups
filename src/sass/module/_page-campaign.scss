@@ -1,0 +1,93 @@
+@use 'global' as *;
+.page-campaign {
+  position: relative;
+}
+
+.page-campaign::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-22);
+  left: calc(50% - 46vw);
+  z-index: -1;
+  
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-69);
+    left: calc(50% - min(49vw , rem(617)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-campaign__inner.inner {
+}
+
+.page-campaign__tab {
+
+}
+
+.page-campaign__tab-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(21) rem(16);
+  
+  @include mq('md') {
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(32);
+  }
+}
+
+.page-campaign__tab-item.js-current {
+}
+
+.page-campaign__tab-item a {
+  font-size: rem(14);
+  line-height: calc(22/14);
+  color: $color-accent;
+  background-color: $white;
+  padding: rem(6);
+  border: 1px solid $color-accent;
+  text-align: center;
+  display: inline-block;
+  min-width: rem(162);
+  width: 100%;
+  transition: .3s;
+}
+
+.page-campaign__tab-item a:hover {
+  @include mq('md') {
+    color: $white;
+    background-color: $color-accent;
+    opacity: 1;
+  }
+}
+
+.page-campaign__content {
+  margin-top: rem(40);
+  margin-right: rem(32);
+  margin-left: rem(32);
+  
+  @include mq('md') {
+  margin-right: 0;
+  margin-left: 0;
+  }
+}
+
+.page-campaign__items {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: rem(40);
+
+  @include mq('md') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+  }
+}
+
+.page-campaign__pagination {
+  margin-top: rem(80);
+}

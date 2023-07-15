@@ -1,0 +1,43 @@
+@use 'global' as *;
+.pagination {
+}
+
+.pagination__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(12);
+}
+
+.pagination__item {
+  font-size: rem(16);
+  font-weight: $bold;
+  font-family: $font-lato;
+  width: rem(38);
+  height: rem(38);
+  display: grid;
+  place-content: center;
+  border: 1px solid $color-accent;
+  color: $color-accent;
+  transition: .3s;
+}
+
+.pagination__item:hover {
+  @include mq('md') {
+    color: $white;
+    background-color: $color-accent;
+    opacity: 1;
+  }
+}
+
+.pagination__item.js-current {
+  color: $white;
+  background-color: $color-accent;
+}
+
+.pagination__item:first-child {
+  margin-right: rem(28);
+}
+.pagination__item:last-child {
+  margin-left: rem(28);
+}
