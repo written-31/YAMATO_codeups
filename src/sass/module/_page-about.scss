@@ -1,0 +1,24 @@
+@use 'global' as *;
+.page-about {
+  position: relative;
+}
+
+.page-about::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-24);
+  left: calc(50% - 46vw);
+  z-index: 2;
+
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-30);
+    left: calc(50% - min(49vw , rem(617)));
+    width: rem(301);
+    height: rem(138);
+  }
+}

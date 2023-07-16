@@ -140,9 +140,13 @@ jQuery(function ($) {
     });
   });
   
+  // galleryのモーダルポップアップ
+    MicroModal.init({
+      awaitCloseAnimation: true,
+      awaitOpenAnimation: true,
+      disableScroll: true,
+    });
 
-
-
-
+  
 });
 
