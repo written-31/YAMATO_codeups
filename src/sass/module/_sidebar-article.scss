@@ -1,0 +1,44 @@
+@use 'global' as *;
+
+.sidebar-article {
+  display: inline-block;
+  width: 100%;
+  padding: rem(16);
+  background: $white;
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+}
+
+.sidebar-article__card {
+  display: flex;
+  gap: rem(16);
+  flex-grow: 1;
+}
+
+.sidebar-article__img {
+  width: rem(121);
+  aspect-ratio: 121/90;
+}
+
+.sidebar-article__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-article__body {
+  color: $color-main;
+  width: calc(100% - rem(121));
+}
+
+.sidebar-article__date {
+  font-size: rem(12);
+  font-family: $font-gotu;
+  line-height: calc(18/12);
+}
+
+.sidebar-article__title {
+  font-size: rem(16);
+  line-height: 1.5;
+  margin-top: rem(4);
+}
+

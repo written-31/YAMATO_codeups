@@ -1,0 +1,40 @@
+@use 'global' as *;
+
+.archive__layout {
+  width: 100%;
+  display: grid;
+  grid-template:
+    "...  .....    ..." auto
+    "...   main    ..." auto
+    "...  .....    ..." rem(80)
+    "...  sidebar  ..." auto
+    "...  .....    ..." auto
+    / auto calc(max(80% , rem(294)))
+    auto;
+  
+  @include mq('md') {
+    grid-template:
+      "... ...... ...... ......  ..."
+      "...  main  ...... sidebar ..."
+      "... ...... ...... ......  ..."
+      / auto auto rem(80) rem(333) auto;
+  }
+}
+
+.archive__main {
+  grid-area: main;
+}
+
+.archive__sidebar {
+  grid-area: sidebar;
+}
+
+.archive__cards {
+
+}
+
+.archive__pagination {
+  margin-top: rem(80);
+}
+
+

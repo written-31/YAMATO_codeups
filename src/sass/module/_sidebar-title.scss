@@ -5,9 +5,10 @@
   align-items: center;
   border-left: rem(8) solid $color-accent;
   position: relative;
+  color: $color-main;
 }
 
-.sidebar-title h4 {
+.sidebar-title h3 {
   font-size: rem(24);
   font-weight: $normal;
   line-height: calc(50/24);
