@@ -1,0 +1,109 @@
+@use 'global' as *;
+.page-information {
+  position: relative;
+}
+
+.page-information::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-98);
+  left: calc(50% - 46vw);
+  z-index: -1;
+
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-70);
+    left: calc(50% - min(49vw , rem(617)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-information__inner {
+
+}
+
+.page-information__tab {
+
+}
+
+.page-information__tab-items {
+  // display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(20);
+
+
+  @include mq('md') {
+    gap: rem(90);
+  }
+}
+
+.page-information__tab-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(10) rem(15);
+  width: 100%;
+  color: $color-accent;
+  background-color: $bg-accent;
+  font-size: rem(14);
+  line-height: 1.5;
+  box-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25);
+  transition: .3s;
+
+  @include mq('md') {
+    padding: rem(13) rem(18) rem(13) rem(18);
+    font-size: rem(24);
+  }
+}
+
+.page-information__tab-icon {
+  @include mq('md') {
+    margin-right: 8px;
+  }
+}
+
+
+.page-information__tab-item:hover {
+  @include mq('md') {
+    color: $white;
+    background: $color-accent;
+    opacity: 1;
+  }
+}
+
+.page-information__tab-item:hover .page-information__tab-icon svg path {
+  @include mq('md') {
+    // filter: none;
+    transition: .3s;
+    fill: $white;
+  }
+}
+
+
+.page-information__contents {
+  margin-top: rem(16);
+
+  @include mq('md') { 
+    margin-top: rem(24);
+  }
+}
+
+.js-btn-active{
+  color: $white;
+  background: $color-accent;
+}
+
+
+.js-contents-active{
+  display: block;
+}
+
+.js-btn-active .page-information__tab-icon svg path {
+  fill: $white;
+}

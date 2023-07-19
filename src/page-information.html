@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- noindex -->
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>CodeUps</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <!-- <link rel="”icon”" href="" /> -->
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JavaScript -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/jquery.inview.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="/">
+            <img src="./assets/images/common/CodeUps-logo.png" alt="CodeUps" />
+          </a>
+        </h1>
+        <!-- /header__logo -->
+        <button class="header__hamburger js-hamburer">
+          <span></span>
+          <span></span>
+          <span></span></button
+        ><!-- /header__hamburger -->
+        <nav class="header__nav u-desktop">
+          <ul class="header__items">
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">Campaign</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">キャンペーン</span
+                ><!-- /header__link-ja --> </a
+              ><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">About us</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">私たちについて</span
+                ><!-- /header__link-ja --> 
+              </a><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">Information</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">ダイビング情報</span
+                ><!-- /header__link-ja --> </a
+              ><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">Blog</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">ブログ</span
+                ><!-- /header__link-ja --> </a
+              ><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">Voice</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">お客様の声</span
+                ><!-- /header__link-ja --> </a
+              ><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">Price</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">料金一覧</span
+                ><!-- /header__link-ja --> </a
+              ><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">FAQ</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">よくある質問</span
+                ><!-- /header__link-ja --> </a
+              ><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="header__link-en">Contact</span
+                ><!-- /header__link-en -->
+                <span class="header__link-ja">お問い合わせ</span
+                ><!-- /header__link-ja --> </a
+              ><!-- /header__link -->
+            </li>
+            <!-- /header__item -->
+          </ul>
+          <!-- /header__items -->
+        </nav>
+        <!-- /header__nav -->
+      </div><!-- /header__inner -->
+    </header>
+    <div class="header-content u-mobile js-nav">
+      <nav class="header-content__nav menu">
+        <div class="header-content__nav-wrapper menu__wrapper">
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">キャンペーン</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">ライセンス取得</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">貸切体験ダイビング</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">ナイトダイビング</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">私たちについて</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">ダイビング情報</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">ライセンス講習</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">体験ダイビング</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">ファンダイビング</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">ブログ</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+        </div>
+        <div class="header-content__nav-wrapper menu__wrapper">
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">お客様の声</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">料金一覧</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">ライセンス講習</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">体験ダイビング</a>
+            </li>
+            <!-- /header-content__item -->
+            <li class="menu__item">
+              <a href="#">ファンダイビング</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">よくある質問</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">プライバシー<br />ポリシー</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">利用規約</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+          <ul class="menu__items">
+            <li class="menu__item menu__item--first">
+              <a href="#">お問い合わせ</a>
+            </li>
+            <!-- /header-content__item -->
+          </ul>
+          <!-- /header-content__items -->
+        </div>
+      </nav>
+      <!-- /header-content__nav -->
+    </div>
+    <!-- /header__content -->
+
+    <main>
+      <div class="sub-fv">
+        <div class="sub-fv__bg">
+          <picture>
+            <!-- ↓幅768px以上で表示↓ -->
+            <source srcset="assets/images/common/page-information_bg-pc.jpg" media="(min-width: 768px)" />
+            <!-- ↓上記全て表示条件に当てはまらない場合に表示↓ -->
+            <img src="./assets/images/common/page-information_bg-sp.jpg" alt="">
+          </picture>
+        </div>
+        <h2 class="sub-fv__text">Information</h2>
+      </div>
+      <!-- /fv -->
+      <div class="bread common-bread">
+        <div class="inner">
+          <div class="bread__nav">TOP > ダイビング情報</div>
+        </div>
+      </div>
+
+      <section class="page-information l-page-information">
+        <div class="page-information__inner inner">
+          <div class="page-information__tab">
+            <!-- タブを構成するブロック -->
+            <div class="page-information__tab-items">
+              <button class="page-information__tab-item js-btn-active">
+                <span class="page-information__tab-icon u-desktop"><svg width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M57.262 29.312a1.815 1.815 0 00-.245-.873c-.433-.754-1.386-1.234-2.829-1.426a28.136 28.136 0 01-2.334-.406 25.793 25.793 0 00-6.668-.594c-1.884.07-3.762.24-5.628.51-.395.06-.855.133-1.364.215-3.78.603-11.47 1.83-16.246.885-.649-1.226-.76-2.32-.332-3.257.931-2.035 4.084-2.988 5.225-3.272 1.35 2.064 3.068 3.334 5.108 3.778 3.795.824 7.29-1.525 7.437-1.625a.637.637 0 00-.36-1.163 1.999 1.999 0 01-.965-.328 4.137 4.137 0 01-1.504-1.593c-1.3-2.396-3.177-3.289-4.255-3.616 2.194-5.256-.66-8.691-.788-8.841l-.017-.02c-.688-.74-.301-2.084-.298-2.096a.636.636 0 00-.885-.76c-3.03 1.451-4.835 4.154-5.22 7.816a15.733 15.733 0 00.147 4.17 24.83 24.83 0 00-4.386.094c-.576.056-11.504 1.228-16.354 9.865-2.134 3.801-2.334 8.365-.534 12.208 1.468 3.135 3.896 5.547 7.218 7.184a13.032 13.032 0 00-2.36 3.491c-2.056 4.453-6.4 3.8-6.583 3.77a.636.636 0 00-.544 1.09c2.065 1.954 4.7 3.105 7.262 2.924 4.862-.344 8.842-4.544 10.326-6.351a15.954 15.954 0 012.028-2.082.627.627 0 00.083.003c3.09-.197 7.055.017 7.085.019l.31.018a9.611 9.611 0 00-2.861 3.208c-1.023 1.835-3.643 5.666-7.697 5.693a5.172 5.172 0 002.01-4.803.635.635 0 00-1.135-.335.635.635 0 00-.13.475c.12.95-.103 1.912-.628 2.713a4.294 4.294 0 01-2.357 1.672.637.637 0 00-.04 1.236 8.43 8.43 0 002.277.324c4.703 0 7.664-4.295 8.812-6.356a8.231 8.231 0 012.817-3.009 9.561 9.561 0 011.4-.711c.007-.003.013-.008.02-.012.2.003.399.006.596.006 12.912 0 20.717-5.338 23.612-7.783a3.824 3.824 0 012.463-.903h1.576a3.316 3.316 0 001.862-.544c1.404-.948 1.209-2.477.863-3.286.024-.974-.13-5.546-4.99-7.322zm-38.96 20.971c-1.076 1.31-4.933 5.605-9.422 5.888-1.734.11-3.403-.392-4.98-1.492 1.82-.215 4.534-1.135 6.086-4.499.017-.039 1.752-3.93 4.467-4.61a.637.637 0 00-.309-1.235 5.584 5.584 0 00-1.908.919c-3.308-1.508-5.704-3.797-7.116-6.811-1.626-3.472-1.442-7.6.492-11.044 4.545-8.095 15.266-9.212 15.373-9.222l.008-.002h.009c.027-.003 2.713-.32 4.947-.002a.637.637 0 00.706-.793 14.362 14.362 0 01-.29-4.638c.299-2.772 1.459-4.842 3.453-6.17a2.998 2.998 0 00.732 1.967c.183.222 2.649 3.364.275 8.178a.637.637 0 00.513.915c.025.003 2.538.263 4.1 3.14a5.41 5.41 0 001.993 2.09c-1.226.56-3.207 1.205-5.22.764-1.806-.395-3.33-1.6-4.526-3.582a.638.638 0 00-.663-.296c-.209.04-5.147 1-6.562 4.086-.47 1.028-.5 2.151-.088 3.352a4.761 4.761 0 01-1.73-1.052 3.369 3.369 0 01-.825-1.304.637.637 0 10-1.21.397c.232.68.618 1.296 1.128 1.8 3.631 3.688 14.71 1.919 20.66.968.506-.08.96-.153 1.354-.212a52.233 52.233 0 015.492-.498 24.515 24.515 0 016.338.565c.749.165 1.57.308 2.44.425 1.33.177 1.693.503 1.968 1.03a4.39 4.39 0 01-.921.187 6.336 6.336 0 01-1.523-.035 17.688 17.688 0 00-9.736 1.546 15.81 15.81 0 00-5.432 4.351c-1.383 1.699-5.233 5.655-11.103 5.702a.637.637 0 00.005 1.273h.006c6.41-.05 10.583-4.332 12.08-6.17a14.55 14.55 0 014.994-4.007 16.371 16.371 0 019.017-1.433c.605.086 1.22.1 1.828.04a5.106 5.106 0 001.405-.328c3.109 1.041 4.025 3.35 4.283 4.86a7.013 7.013 0 00-3.737-1.201h-.008c-7.07-.616-12.966 4.78-13.42 5.208-5.263 4.236-13.836 5.308-13.922 5.319a.838.838 0 00-.037.005l-4.44.805c-.239.036-2.163.384-4.738 2.526-.835.702-1.6 1.482-2.286 2.33zm36.337-9.866a28.667 28.667 0 01-5.557 3.604c.52-.837.95-1.727 1.282-2.655a.637.637 0 10-1.195-.438c-1.28 3.495-2.977 4.37-3.02 4.39a.065.065 0 01-.015.01 35.8 35.8 0 01-3.569 1.171 9.84 9.84 0 001.715-3.242c1.113-3.41 2.316-4.566 2.493-4.723a20.655 20.655 0 014.436-2.309c-.386.56-.72 1.155-.994 1.778a.62.62 0 00.32.841.737.737 0 00.842-.32c1.069-2.378 2.238-2.929 2.426-3.004a12.308 12.308 0 013.26-.158.748.748 0 00.072.003h.017a7.503 7.503 0 00-.887 2.075 7.712 7.712 0 01-1.626 2.977zm-18.456 7.247a6.008 6.008 0 00.967-1.547c.006-.017.62-1.547 1.487-2.51a24.109 24.109 0 005.213-2.803 21.906 21.906 0 00-.78 2.057c-1.13 3.466-3.17 4.227-3.383 4.298-1.11.211-2.277.384-3.504.506zm-12.998.002c1.395-.827 2.302-.975 2.33-.98l.013-.002c.005 0 .01 0 .016-.002l4.063-.736a5.593 5.593 0 01-1.636 1.785c-.934-.04-2.84-.104-4.786-.065zm6.607.162a6.704 6.704 0 001.34-2.125 39.778 39.778 0 005.46-1.355c-.232.417-.44.847-.622 1.288-.666 1.509-1.737 2.062-2.033 2.19a45.796 45.796 0 01-4.145.002zm30.884-8.963c-.342.22-.741.334-1.148.326h-1.577a5.047 5.047 0 00-1.046.112c.245-.489.442-1 .588-1.527.358-1.3.86-1.945 1.078-2.179.957.274 1.822.8 2.505 1.525.112.263.43 1.182-.4 1.743z" fill="#408F95"/><path d="M17.131 22.852a.636.636 0 00.815-.382c.037-.1.076-.2.118-.299a.635.635 0 10-1.172-.498c-.051.12-.099.242-.143.364a.638.638 0 00.382.815zm16.632 12.587a.632.632 0 00.372-.12l.61-.439A.637.637 0 0034 33.847l-.61.438a.638.638 0 00.373 1.154zM22.923 35a.637.637 0 100-1.273.637.637 0 000 1.273zm-6.86 4.882a.637.637 0 10.248.025c-.08-.025-.164-.033-.248-.025zm-3.277-7.36a.637.637 0 10.126 1.268.637.637 0 00-.126-1.268z" fill="#408F95"/></svg></span>
+                <span>ライセンス<br class="u-mobile">講習</span>
+              </button>
+              <button class="page-information__tab-item">
+                <span class="page-information__tab-icon u-desktop"><svg width="63" height="63" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.503 33.36a.624.624 0 00-.768-.432l-.304.083a.624.624 0 10.317 1.204c.108-.028.215-.058.322-.087a.623.623 0 00.433-.767z" fill="#408F95"/><path d="M61.054 37.23c-2.568.641-5.259.6-7.807-.117a14.17 14.17 0 00.701-3.886c.173-4.664-1.925-8.513-6.066-11.132a19.541 19.541 0 00-6.287-2.542 38.634 38.634 0 00-3.253-.547c.194-.743.437-1.473.728-2.184a.624.624 0 00-.775-.839 16.819 16.819 0 00-7.587 5.367c-2.469.281-4.39 1.278-5.56 2.887a1.06 1.06 0 00-.013.02c-.123.183-2.828 4.132-7.552 3.655 1.573-1.463 4.422-4.694 5.13-9.407.935-6.22-.754-10.714-1.829-12.82 2.007.693 5.694 2.683 7.33 8.154.067.25.819 2.842 3.734 4.58a.624.624 0 00.638-1.07c-2.538-1.514-3.162-3.81-3.167-3.831a.409.409 0 00-.007-.026C26.886 5.03 19.96 4.13 19.666 4.095a.624.624 0 00-.578.983c.037.05 3.61 5.144 2.392 13.242-.89 5.93-5.629 9.431-5.676 9.466a.624.624 0 00.211 1.11 9.35 9.35 0 002.322.3c4.796 0 7.623-3.942 7.824-4.232.776-1.065 1.94-1.788 3.468-2.16a22.937 22.937 0 00-3.102 6.874 9.006 9.006 0 01-1.245 2.823 7.835 7.835 0 01-1.369 1.56 76.873 76.873 0 01-10.471-.693c-8.764-.934-12.055 3.738-12.191 3.938a.623.623 0 00-.08.539 24.523 24.523 0 004.71 8.497c2.269 3.974 6.643 7.146 9.923 9.11 3.679 2.205 8.97 3.457 12.208 3.457a23.914 23.914 0 0010.783-2.597c1.194.802 3.255 1.755 6.31 1.755a17.536 17.536 0 004.106-.519.623.623 0 00.222-1.108c-.015-.01-1.496-1.118-2.698-3.34a.623.623 0 10-1.096.594 13.192 13.192 0 002.102 2.887c-3.706.646-6.196-.135-7.671-.95 4.99-2.839 8.298-6.774 9.69-8.649.24.013.483.02.732.02 1.57.015 3.127-.291 4.575-.899 3.072-1.317 5.345-4.034 6.754-8.072a.623.623 0 00-.768-.802l.001.001zM28.011 57.664c-2.43 0-8.076-1.189-11.567-3.28-3.048-1.826-7.072-4.721-9.265-8.293 1.106-.898 4.932-3.288 11.22.184.138.074 3.467 1.834 8.46 2.674 4.554.766 11.38.857 18.178-2.982 1.055.407 2.151.698 3.27.867-2.65 3.373-9.712 10.83-20.296 10.83zm26.575-12.708c-4.433 1.907-9.285-.227-9.333-.249a.613.613 0 00-.57.03c-6.55 3.801-13.172 3.724-17.575 2.99-4.802-.8-8.09-2.534-8.115-2.547-4.333-2.393-7.634-2.186-9.64-1.59a8.596 8.596 0 00-2.906 1.49 24.135 24.135 0 01-3.986-7.302c.75-.886 3.864-3.912 10.836-3.173.56.084 9.866 1.433 17.73.178a.623.623 0 00-.198-1.231c-1.7.26-3.416.418-5.137.471.221-.264.429-.539.622-.824a10.254 10.254 0 001.42-3.212c.564-2.193 2.873-9.256 9.692-12.32-.884 2.699-2.238 8.753 1.986 11.99-.751.961-1.851 1.773-3.297 2.424a.623.623 0 10.512 1.136c2.815-1.267 4.514-3.11 5.05-5.476a.35.35 0 00.006-.028c.018-.102.416-2.512-1.991-4.424a.624.624 0 00-.775.977c1.755 1.393 1.562 3.064 1.54 3.219a5.45 5.45 0 01-.385 1.106c-2.606-2.1-2.538-5.697-2.014-8.363a37.608 37.608 0 013.303.55 18.573 18.573 0 015.886 2.39c3.776 2.402 5.611 5.77 5.454 10.012a12.93 12.93 0 01-.633 3.524c-.48-.195-.946-.42-1.398-.673a.624.624 0 00-.611 1.087c4.026 2.262 8.194 1.927 10.177 1.573-1.293 3.101-3.19 5.206-5.65 6.264z" fill="#408F95"/><path d="M19.741 38.134l-.748.3a.623.623 0 10.463 1.157l.748-.3a.625.625 0 00.35-.811.62.62 0 00-.813-.346zm12.669.985a.623.623 0 00-1.136-.514c-.058.127-1.383 3.131.972 5.64a.658.658 0 00.881.027.621.621 0 00.028-.88c-1.772-1.888-.79-4.171-.745-4.273zm3.552-.691a.623.623 0 10-1.136-.514c-.057.127-1.382 3.132.973 5.64.123.13.648.225.88.028a.614.614 0 00.029-.881c-1.772-1.887-.792-4.168-.746-4.273zm3.206-1.328a.623.623 0 00-1.135-.514c-.058.127-1.383 3.132.972 5.64.122.13.644.24.88.028a.617.617 0 00.028-.881c-1.772-1.889-.789-4.174-.745-4.273z" fill="#408F95"/></svg></span>
+                <span>ファン<br class="u-mobile">ダイビング</span>
+              </button>
+              <button class="page-information__tab-item">
+                <span class="page-information__tab-icon u-desktop"><svg width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.826 41.024a3.354 3.354 0 01-1.677-.493L4.813 34.502a2.56 2.56 0 010-4.73l4.205-2.431a26.442 26.442 0 015.881-2.349l7.424-1.786a19.578 19.578 0 016.368-.275l9.536 1.434a8.249 8.249 0 004.884-1.101l3.392-2.285a.96.96 0 111.075 1.594l-3.418 2.285a10.021 10.021 0 01-6.214 1.382l-9.536-1.408a17.92 17.92 0 00-5.632.243L15.36 26.88c-1.868.5-3.67 1.22-5.37 2.144l-4.23 2.413a1.043 1.043 0 00-.64.704 1.043 1.043 0 00.64.704l10.342 6.029a1.056 1.056 0 00.922.185 1.05 1.05 0 00.32-.883l.102-6.733a.96.96 0 011.92 0l-.083 6.759a2.821 2.821 0 01-1.28 2.56c-.363.189-.768.28-1.177.262zm37.811-8.294a4 4 0 01-1.517-.295l-1.645-.64a101.304 101.304 0 01-5.478-2.432l-2.56-1.28a.961.961 0 11.845-1.721l2.56 1.28a98.56 98.56 0 005.344 2.374l1.645.64a2.097 2.097 0 002.732-1.165l2.317-5.76a.961.961 0 011.865.342.96.96 0 01-.085.375l-2.317 5.76a4.026 4.026 0 01-3.706 2.522zm4.883 10.06a.96.96 0 01-.852-.55l-2.15-4.794a2.625 2.625 0 00-3.027-1.382l-.48.147c-1.613.487-4.263 1.28-5.895 1.709l-3.84 1.056a.96.96 0 01-.512-1.85l3.84-1.056a296.61 296.61 0 005.857-1.696l.48-.147a4.563 4.563 0 015.299 2.42l2.15 4.793a.96.96 0 01-.87 1.35zm-28.096.48a10.363 10.363 0 01-2.317-.236l-8.25-1.92a.96.96 0 01.442-1.87l8.25 1.92c1.762.327 3.578.213 5.286-.332l2.067-.774a10.464 10.464 0 015.805-.378l2.323.71a.967.967 0 11-.57 1.85l-2.322-.71a8.71 8.71 0 00-4.57.339l-2.06.755a12.378 12.378 0 01-4.084.646z" fill="#408F95"/><path d="M11.514 32.826a1.318 1.318 0 100-2.637 1.318 1.318 0 000 2.637zm12.589 3.308a.96.96 0 01-.423-1.824l3.7-1.785h-5.703a.96.96 0 01-.953-.967.947.947 0 01.966-.953h8.141c1.037 0 1.6.32 1.753.966.154.647-.236 1.203-1.145 1.645l-5.882 2.842a.96.96 0 01-.454.076z" fill="#408F95"/></svg></span>
+                <span>体験<br class="u-mobile">ダイビング</span>
+              </button>
+            </div>
+          
+            <!-- コンテンツを構成するブロック -->
+            <div class="page-information__contents information-contents">
+              <div class="information-contents__content information-contents__content--border information-contents__content--flex
+              js-content-active">
+                <div class="information-contents__thumb information-contents__thumb--mt js-colorbox">
+                  <img src="assets/images/common/information_fish.jpg" alt="ダイビング中に見れる魚の群れ">
+                </div><!-- /information-content__thumb -->
+                <div class="information-contents__body information-contents__body--mt">
+                  <h3 class="information-contents__sub-title">ライセンス講習</h3><!-- /information-content__sub-title -->
+                  <p class="information-contents__text">
+                    当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
+                    正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+                  </p><!-- /information-content__text -->
+                </div><!-- /information-content__body -->
+              </div>
+              <div class="information-contents__content information-contents__content--border information-contents__content--flex">
+                <div class="information-contents__thumb information-contents__thumb--mt js-colorbox">
+                  <img src="assets/images/common/information_fish.jpg" alt="ダイビング中に見れる魚の群れ">
+                </div><!-- /information-content__thumb -->
+                <div class="information-contents__body information-contents__body--mt">
+                  <h3 class="information-contents__sub-title">ライセンス講習</h3><!-- /information-content__sub-title -->
+                  <p class="information-contents__text">
+                    当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
+                    正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+                  </p><!-- /information-content__text -->
+                </div><!-- /information-content__body -->
+              </div>
+              <div class="information-contents__content information-contents__content--border information-contents__content--flex">
+                <div class="information-contents__thumb information-contents__thumb--mt js-colorbox">
+                  <img src="assets/images/common/information_fish.jpg" alt="ダイビング中に見れる魚の群れ">
+                </div><!-- /information-content__thumb -->
+                <div class="information-contents__body information-contents__body--mt">
+                  <h3 class="information-contents__sub-title">ライセンス講習</h3><!-- /information-content__sub-title -->
+                  <p class="information-contents__text">
+                    当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
+                    正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+                  </p><!-- /information-content__text -->
+                </div><!-- /information-content__body -->
+              </div>
+            </div>
+          </div>
+        </div><!-- /inner -->
+      </section><!-- /about -->
+
+      <section class="contact l-top-contact">
+        <div class="contact__inner inner">
+        <div class="contact__wrapper">
+          <div class="contact__info-wrapper">
+            <div class="contact__logo">
+              <img src="./assets/images/common/CodeUps-logo_2.png" alt="CodeUps">
+            </div><!-- /contact__logo -->
+            <div class="contact__info">
+              <div class="contact__info-detail">
+                <address class="contact__address">
+                  <span>沖縄県那覇市1-1</span>
+                  <span>TEL:0120-000-0000</span>
+                </address>
+                <p class="contact__time">営業時間: <time datetime="08:30">8:30</time>-<time datetime="19:00">19:00</time></p>                <p class="contact__holiday">定休日:毎週火曜日</p>
+              </div><!-- /contact__info-detail -->
+              <div class="contact__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.779121571587!2d72.99204830000001!3d4.2631442999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b4059352319c55d%3A0x147931506cb9527f!2zUmFzZGhvbywg44Oi44Or44OH44Kj44OW!5e0!3m2!1sja!2sjp!4v1688262630397!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div><!-- /contact__thumb -->
+            </div><!-- /contact__info -->
+          </div><!-- /contact__info-wrapper -->
+          <div class="contact__area">
+            <div class="contact__title section-title">
+              <p class="section-title__sub section-title__sub--lg">Contact</p><!-- /section-title__sub -->
+              <h2 class="section-title__main section-title__main--mt">お問い合わせ</h2><!-- /section-title__main -->
+            </div><!-- / -->            
+            <p class="contact__text">
+              ご予約・お問い合わせはコチラ
+            </p><!-- /contact__text -->
+            <div class="contact__btn">
+              <a href="#" class="btn slide">Contact us<span></span></a><!-- /btn -->
+            </div><!-- /contact__btn -->
+          </div><!-- /contact__area -->
+        </div><!-- /contact__wrapper -->
+      </div><!-- /contact__inner -->
+      </section><!-- /contact -->
+    </main>
+    <footer class="footer common-footer">
+      <div class="footer__wrapper">
+        <div class="footer__head">
+          <div class="footer__logo">
+            <a href="#"
+              ><img src="./assets/images/common/CodeUps-logo.png" alt="CodeUps"
+            /></a>
+          </div>
+          <!-- /footer__logo -->
+          <div class="footer__sns">
+            <ul class="footer__sns-items">
+              <li class="footer__sns-item">
+                <a href="#">
+                  <img src="./assets/images/common/icon_facebook.svg" alt="facebookのリンク"/>
+                </a>
+              </li>
+              <!-- /footer__sns-item -->
+              <li class="footer__sns-item">
+                <a href="#">
+                  <img src="./assets/images/common/icon_instagram.svg" alt="instagramのリンク"/>
+                </a>
+              </li>
+              <!-- /footer__sns-item -->
+            </ul>
+            <!-- /footer__sns-items -->
+          </div>
+          <!-- /footer__sns -->
+        </div>
+        <!-- /footer__head -->
+        <div class="footer__content">
+          <nav class="footer__content-nav menu">
+            <div class="menu__wrapper">
+              <div class="menu__block">
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">キャンペーン</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">ライセンス取得</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">貸切体験ダイビング</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">ナイトダイビング</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">私たちについて</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+              </div>
+              <!-- /footer__content-block -->
+              <div class="menu__block">
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">ダイビング情報</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">ライセンス講習</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">体験ダイビング</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">ファンダイビング</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">ブログ</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+              </div>
+              <!-- /footer__content-block -->
+            </div>
+            <div class="menu__wrapper">
+              <div class="menu__block">
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">お客様の声</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">料金一覧</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">ライセンス講習</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">体験ダイビング</a>
+                  </li>
+                  <!-- /header-content__item -->
+                  <li class="menu__item">
+                    <a href="#">ファンダイビング</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+              </div>
+              <!-- /footer__content-block -->
+              <div class="menu__block">
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">よくある質問</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">利用規約</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+                <ul class="menu__items">
+                  <li class="menu__item menu__item--first">
+                    <a href="#">お問い合わせ</a>
+                  </li>
+                  <!-- /header-content__item -->
+                </ul>
+                <!-- /header-content__items -->
+              </div>
+              <!-- /footer__content-block -->
+            </div>
+          </nav>
+          <!-- /header-content__nav -->
+        </div>
+        <!-- /footer__content -->
+        <p class="footer__copyright">
+          <small
+            >Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights
+            Reserved.</small
+          >
+        </p>
+        <!-- /footer__copyright -->
+      </div>
+      <!-- /footer__wrapper -->
+    </footer>
+
+    <a class="pagetop" id="js-pagetop">
+      <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a><!-- /pagetop -->
+  </body>
+</html>
+

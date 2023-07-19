@@ -147,6 +147,16 @@ jQuery(function ($) {
       disableScroll: true,
     });
 
+  // tab切り替え
+  $(function(){
+    $('.page-information__tab-item').on('click', function(){
+      let index = $('.page-information__tab-item').index(this);
   
+      $('.page-information__tab-item').removeClass('js-btn-active');
+      $(this).addClass('js-btn-active');
+      $('.information-contents__content--dn').removeClass('is-contents-active');
+      $('.information-contents__content--dn').eq(index).addClass('is-contents-active');
+    });
+  }); 
 });
 
