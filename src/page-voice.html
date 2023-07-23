@@ -34,8 +34,6 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script defer src="./assets/js/script.js"></script>
@@ -58,7 +56,7 @@
         <nav class="header__nav u-desktop">
           <ul class="header__items">
             <li class="header__item">
-              <a href="index.html" class="header__link">
+              <a href="#" class="header__link">
                 <span class="header__link-en">Campaign</span
                 ><!-- /header__link-en -->
                 <span class="header__link-ja">キャンペーン</span
@@ -67,7 +65,7 @@
             </li>
             <!-- /header__item -->
             <li class="header__item">
-              <a href="page-about.html" class="header__link">
+              <a href="#" class="header__link">
                 <span class="header__link-en">About us</span
                 ><!-- /header__link-en -->
                 <span class="header__link-ja">私たちについて</span
@@ -76,7 +74,7 @@
             </li>
             <!-- /header__item -->
             <li class="header__item">
-              <a href="page-information.html" class="header__link">
+              <a href="#" class="header__link">
                 <span class="header__link-en">Information</span
                 ><!-- /header__link-en -->
                 <span class="header__link-ja">ダイビング情報</span
@@ -85,7 +83,7 @@
             </li>
             <!-- /header__item -->
             <li class="header__item">
-              <a href="archive-blog.html" class="header__link">
+              <a href="#" class="header__link">
                 <span class="header__link-en">Blog</span
                 ><!-- /header__link-en -->
                 <span class="header__link-ja">ブログ</span
@@ -94,7 +92,7 @@
             </li>
             <!-- /header__item -->
             <li class="header__item">
-              <a href="page-voice.html" class="header__link">
+              <a href="#" class="header__link">
                 <span class="header__link-en">Voice</span
                 ><!-- /header__link-en -->
                 <span class="header__link-ja">お客様の声</span
@@ -257,402 +255,258 @@
         <div class="sub-fv__bg">
           <picture>
             <!-- ↓幅768px以上で表示↓ -->
-            <source srcset="assets/images/common/archive-blog_fv-pc.jpg" media="(min-width: 768px)" />
+            <source srcset="assets/images/common/voice-bg_pc.jpg" media="(min-width: 768px)" />
             <!-- ↓上記全て表示条件に当てはまらない場合に表示↓ -->
-            <img src="./assets/images/common/archive-blog_fv-sp.jpg" alt="">
+            <img src="./assets/images/common/voice-bg_sp.jpg" alt="">
           </picture>
         </div>
-        <h2 class="sub-fv__text">Blog</h2>
+        <h2 class="sub-fv__text">Voice</h2>
       </div>
       <!-- /fv -->
       <div class="bread common-bread">
         <div class="inner">
-          <div class="bread__nav">TOP > ブログ一覧</div>
+          <div class="bread__nav">TOP > お客様の声</div>
         </div>
       </div>
 
-      <div class="archive l-archive">
-        <div class="archive__inner inner">
-          <div class="archive__layout">
-            <div class="archive__main">
-              <div class="archive__cards cards cards--col2 ">
-
-                <!-- ループ開始 -->
-                <a href="single-blog.html" class="cards__card card">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card1.jpg" alt="神秘的なサンゴ礁" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">ライセンス取得</h2>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card ">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card2.jpg" alt="ダイビング中稀に合うことのできるウミガメ" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">ウミガメと泳ぐ</h2>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card ">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card3.jpg" alt="ダイビング中に見れるカクレクマノミ" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">カクレクマノミ</h3>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card1.jpg" alt="神秘的なサンゴ礁" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">ライセンス取得</h2>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card ">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card2.jpg" alt="ダイビング中稀に合うことのできるウミガメ" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">ウミガメと泳ぐ</h2>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card ">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card3.jpg" alt="ダイビング中に見れるカクレクマノミ" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">カクレクマノミ</h3>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card1.jpg" alt="神秘的なサンゴ礁" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">ライセンス取得</h2>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card ">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card2.jpg" alt="ダイビング中稀に合うことのできるウミガメ" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">ウミガメと泳ぐ</h2>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card ">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card3.jpg" alt="ダイビング中に見れるカクレクマノミ" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">カクレクマノミ</h3>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <a href="single-blog.html" class="cards__card card ">
-                  <div class="card__thumb">
-                    <img src="assets/images/common/blog-card3.jpg" alt="ダイビング中に見れるカクレクマノミ" />
-                  </div>
-                  <!-- /card__thumb -->
-                  <div class="card__body">
-                    <p class="card__date">
-                      <time datetime="2023-11-17">2023.11/17</time>
-                    </p>
-                    <!-- /card__date -->
-                    <h2 class="card__title">カクレクマノミ</h3>
-                    <!-- /card__title -->
-                    <p class="card__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                    </p>
-                    <!-- /card__text -->
-                  </div>
-                  <!-- /card__body --> </a
-                ><!-- /card -->
-                <!-- ループ終わり -->
-
-              </div>
-              <div class="archive__pagination pagination">
-                <ul class="pagination__items">
-                  <li class="pagination__item"><a>＜</a></li>
-                  <li class="pagination__item js-current"><a>1</a></li>
-                  <li class="pagination__item"><a>2</a></li>
-                  <li class="pagination__item"><a>3</a></li>
-                  <li class="pagination__item"><a>4</a></li>
-                  <li class="pagination__item"><a>5</a></li>
-                  <li class="pagination__item"><a>6</a></li>
-                  <li class="pagination__item"><a>＞</a></li>
-                </ul>
-              </div>
-            </div>
-            <aside class="archive__sidebar sidebar">
-              <div class="sidebar__inner">
-
-              <section class="sidebar__articles">
-                <div class="sidebar__title sidebar-title">
-                  <img src="./assets/images/common/icon_sidebar.png" alt="">
-                  <h3>人気記事</h3>
-                </div>
-                <ul class="sidebar__articles-items">
-                  <!-- ループ開始 -->
-                  <li class="sidebar__articles-item">
-                    <a class="sidebar__articles-link sidebar-article" href="single-blog.html">
-                      <div class="sidebar-article__card">
-                        <div class="sidebar-article__img">
-                          <img src="./assets/images/common/blog-card4.jpg" alt="">
-                        </div>
-                        <div class="sidebar-article__body">
-                          <p class="sidebar-article__date">
-                            <time datetime="2023-11-17">2023.11/17</time>
-                          </p>
-                          <h4 class="sidebar-article__title">ライセンス取得</h4>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="sidebar__articles-item">
-                    <a class="sidebar__articles-link sidebar-article" href="#">
-                      <div class="sidebar-article__card">
-                        <div class="sidebar-article__img">
-                          <img src="./assets/images/common/blog-card2.jpg" alt="">
-                        </div>
-                        <div class="sidebar-article__body">
-                          <p class="sidebar-article__date">
-                            <time datetime="2023-11-17">2023.11/17</time>
-                          </p>
-                          <h4 class="sidebar-article__title">ウミガメと泳ぐ</h4>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="sidebar__articles-item">
-                    <a class="sidebar__articles-link sidebar-article" href="#">
-                      <div class="sidebar-article__card">
-                        <div class="sidebar-article__img">
-                          <img src="./assets/images/common/blog-card3.jpg" alt="">
-                        </div>
-                        <div class="sidebar-article__body">
-                          <p class="sidebar-article__date">
-                            <time datetime="2023-11-17">2023.11/17</time>
-                          </p>
-                          <h4 class="sidebar-article__title">カクレクマノミ</h4>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- ループ終了 -->
-                </ul>
-              </section>
-
-              <section class="sidebar__repeat l-sidebar">
-                <div class="sidebar__title sidebar-title">
-                  <img src="./assets/images/common/icon_sidebar.png" alt="">
-                  <h3>口コミ</h3>
-                </div>
-                <div class="sidebar__repeat-img">
-                  <img src="./assets/images/common/sidebar_repeat.jpg" alt="">
-                </div>
-                <div class="sidebar__repeat-body">
-                  <div class="sidebar__repeat-meta">
-                    <p class="sidebar__repeat-age">30代(カップル)</p>
-                  </div>
-                  <h4 class="sidebar__repeat-title">ここにタイトルが入ります。ここにタイトル</h4>
-                </div>
-                <div class="sidebar__repeat-btn">
-                  <a href="#" class="btn slide">Contact us<span></span></a><!-- /btn -->
-                </div><!-- /contact__btn -->
-              </section>
-
-              <section class="sidebar__campaign l-sidebar">
-                <div class="sidebar__title sidebar-title">
-                  <img src="./assets/images/common/icon_sidebar.png" alt="">
-                  <h3>キャンペーン</h3>
-                </div>
-                <div class="sidebar__campaign-cards">
-
-                  <!-- サブループ開始 -->
-                  <div href="#" class="sidebar__campaign-card campaign-card">
-                    <div class="campaign-card__thumb">
-                      <img src="assets/images/common/campaign1.jpg" alt="ダイビング中に見れる魚の群れ" />
-                    </div>
-                    <div class="campaign-card__body campaign-card__body--center campaign-card__body--padding">
-                      <h3 class="campaign-card__title">ライセンス取得</h3>
-                      <div class="campaign-card__wrap campaign-card__wrap--center">
-                        <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                        <div class="campaign-card__discount">
-                          <span class="campaign-card__discount-before"><span>
-                          </span>¥56,000</span>
-                          <span class="campaign-card__discount-after">¥46,000</span>
-                        </div>
-                      <!-- /campaign-card__discount -->
-                      </div><!-- /campaign-card__body-footer -->
-                    </div>
-                    <!-- /card__body -->
-                  </div><!-- /card -->
-                  <!-- サブループ終了 -->
-
-                  <div href="#" class="sidebar__campaign-card campaign-card">
-                    <div class="campaign-card__thumb">
-                      <img src="assets/images/common/campaign1.jpg" alt="ダイビング中に見れる魚の群れ" />
-                    </div>
-                    <div class="campaign-card__body campaign-card__body--center campaign-card__body--padding">
-                      <h3 class="campaign-card__title">ライセンス取得</h3>
-                      <div class="campaign-card__wrap campaign-card__wrap--center">
-                        <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                        <div class="campaign-card__discount">
-                          <span class="campaign-card__discount-before"><span>
-                          </span>¥56,000</span>
-                          <span class="campaign-card__discount-after">¥46,000</span>
-                        </div>
-                      <!-- /campaign-card__discount -->
-                      </div><!-- /campaign-card__body-footer -->
-                    </div>
-                    <!-- /card__body -->
-                  </div><!-- /card -->
-                </div>
-                <div class="sidebar__campaign-btn">
-                  <a href="#" class="btn slide">Contact us<span></span></a><!-- /btn -->
-                </div><!-- /contact__btn -->
-              </section>
-
-              <section class="sidebar__archive l-sidebar">
-                <div class="sidebar__title sidebar-title">
-                  <img src="./assets/images/common/icon_sidebar.png" alt="">
-                  <h3>アーカイブ</h3>
-                </div>
-                <div class="sidebar__archive-content">
-                  <details open>
-                    <summary><span></span>2023</summary>
-                    <ul>
-                      <li><a href="">3月</a></li>
-                      <li><a href="">2月</a></li>
-                      <li><a href="">1月</a></li>
-                    </ul>
-                  </details>
-                  <details>
-                    <summary><span></span>2022</summary>
-                    <ul>
-                      <li><a href="">3月</a></li>
-                      <li><a href="">2月</a></li>
-                      <li><a href="">1月</a></li>
-                    </ul>
-                  </details>
-                </div>
-              </section>
-            </div>
-            </aside>
+      <div class="page-voice l-page-voice">
+        <div class="page-voice__inner inner">
+          <div class="page-voice__tab">
+            <ul class="page-voice__tab-items">
+              <li class="page-voice__tab-item js-current"><a>ALL</a></li>
+              <li class="page-voice__tab-item"><a>ライセンス講習</a></li>
+              <li class="page-voice__tab-item"><a>ファンダイビング</a></li>
+              <li class="page-voice__tab-item"><a>体験ダイビング</a></li>
+            </ul>
           </div>
-        </div><!-- /inner -->
-      </div><!-- /about -->
+          <div class="page-voice__content">
+            <ul class="page-voice__items">
+              <li class="page-voice__item">
+                <div class="page-voice__card voice-card">
+                  <div class="voice-card__head">
+                    <div class="voice-card__content">
+                      <div class="voice-card__info">
+                        <span class="voice-card__age">20代(女性)</span
+                        ><!-- /voice-card__age -->
+                        <a href="#" class="voice-card__category">ライセンス講習</a
+                        ><!-- /voice-card__category -->
+                      </div>
+                      <!-- /voice-card__info -->
+                      <h3 class="voice-card__title">
+                        ここにタイトルが入ります。ここにタイトル
+                      </h3>
+                      <!-- /voice-card__title -->
+                    </div>
+                    <!-- /voice-card__content -->
+                    <div class="voice-card__thumb js-colorbox">
+                      <img src="./assets/images/common/voice-card1.jpg" alt="お客様の写真" />
+                    </div>
+                    <!-- /voice-card__thumb -->
+                  </div>
+                  <!-- /voice-card__head -->
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                    <!-- /voice-card__text -->
+                  </div>
+                  <!-- /voice-card__body -->
+                </div>
+    
+              </li>
+              <li class="page-voice__item">
+                <div class="page-voice__card voice-card">
+                  <div class="voice-card__head">
+                    <div class="voice-card__content">
+                      <div class="voice-card__info">
+                        <span class="voice-card__age">30代(男性)</span
+                        ><!-- /voice-card__age -->
+                        <a href="#" class="voice-card__category">ファンダイビング</a
+                        ><!-- /voice-card__category -->
+                      </div>
+                      <!-- /voice-card__info -->
+                      <h3 class="voice-card__title">
+                        ここにタイトルが入ります。ここにタイトル
+                      </h3>
+                      <!-- /voice-card__title -->
+                    </div>
+                    <!-- /voice-card__content -->
+                    <div class="voice-card__thumb js-colorbox">
+                      <img src="./assets/images/common/voice-card2.jpg" alt="お客様の写真" />
+                    </div>
+                    <!-- /voice-card__thumb -->
+                  </div>
+                  <!-- /voice-card__head -->
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                    <!-- /voice-card__text -->
+                  </div>
+                  <!-- /voice-card__body -->
+                </div>
+    
+              </li>
+              <li class="page-voice__item">
+                <div class="page-voice__card voice-card">
+                  <div class="voice-card__head">
+                    <div class="voice-card__content">
+                      <div class="voice-card__info">
+                        <span class="voice-card__age">30代(女性)</span
+                        ><!-- /voice-card__age -->
+                        <a href="#" class="voice-card__category">体験ダイビング</a
+                        ><!-- /voice-card__category -->
+                      </div>
+                      <!-- /voice-card__info -->
+                      <h3 class="voice-card__title">
+                        ここにタイトルが入ります。ここにタイトル
+                      </h3>
+                      <!-- /voice-card__title -->
+                    </div>
+                    <!-- /voice-card__content -->
+                    <div class="voice-card__thumb js-colorbox">
+                      <img src="./assets/images/common/voice-card3.jpg" alt="お客様の写真" />
+                    </div>
+                    <!-- /voice-card__thumb -->
+                  </div>
+                  <!-- /voice-card__head -->
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                    <!-- /voice-card__text -->
+                  </div>
+                  <!-- /voice-card__body -->
+                </div>
+    
+              </li>
+              <li class="page-voice__item">
+                <div class="page-voice__card voice-card">
+                  <div class="voice-card__head">
+                    <div class="voice-card__content">
+                      <div class="voice-card__info">
+                        <span class="voice-card__age">20代(女性)</span
+                        ><!-- /voice-card__age -->
+                        <a href="#" class="voice-card__category">体験ダイビング</a
+                        ><!-- /voice-card__category -->
+                      </div>
+                      <!-- /voice-card__info -->
+                      <h3 class="voice-card__title">
+                        ここにタイトルが入ります。ここにタイトル
+                      </h3>
+                      <!-- /voice-card__title -->
+                    </div>
+                    <!-- /voice-card__content -->
+                    <div class="voice-card__thumb js-colorbox">
+                      <img src="./assets/images/common/voice-card4.jpg" alt="お客様の写真" />
+                    </div>
+                    <!-- /voice-card__thumb -->
+                  </div>
+                  <!-- /voice-card__head -->
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                    <!-- /voice-card__text -->
+                  </div>
+                  <!-- /voice-card__body -->
+                </div>
+    
+              </li>
+              <li class="page-voice__item">
+                <div class="page-voice__card voice-card">
+                  <div class="voice-card__head">
+                    <div class="voice-card__content">
+                      <div class="voice-card__info">
+                        <span class="voice-card__age">30代(カップル)</span
+                        ><!-- /voice-card__age -->
+                        <a href="#" class="voice-card__category">ファンダイビング</a
+                        ><!-- /voice-card__category -->
+                      </div>
+                      <!-- /voice-card__info -->
+                      <h3 class="voice-card__title">
+                        ここにタイトルが入ります。ここにタイトル
+                      </h3>
+                      <!-- /voice-card__title -->
+                    </div>
+                    <!-- /voice-card__content -->
+                    <div class="voice-card__thumb js-colorbox">
+                      <img src="./assets/images/common/voice-card5.jpg" alt="お客様の写真" />
+                    </div>
+                    <!-- /voice-card__thumb -->
+                  </div>
+                  <!-- /voice-card__head -->
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                    <!-- /voice-card__text -->
+                  </div>
+                  <!-- /voice-card__body -->
+                </div>
+    
+              </li>
+              <li class="page-voice__item">
+                <div class="page-voice__card voice-card">
+                  <div class="voice-card__head">
+                    <div class="voice-card__content">
+                      <div class="voice-card__info">
+                        <span class="voice-card__age">20代(女性)</span
+                        ><!-- /voice-card__age -->
+                        <a href="#" class="voice-card__category">ライセンス取得</a
+                        ><!-- /voice-card__category -->
+                      </div>
+                      <!-- /voice-card__info -->
+                      <h3 class="voice-card__title">
+                        ここにタイトルが入ります。ここにタイトル
+                      </h3>
+                      <!-- /voice-card__title -->
+                    </div>
+                    <!-- /voice-card__content -->
+                    <div class="voice-card__thumb js-colorbox">
+                      <img src="./assets/images/common/voice-card6.jpg" alt="お客様の写真" />
+                    </div>
+                    <!-- /voice-card__thumb -->
+                  </div>
+                  <!-- /voice-card__head -->
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。
+                    </div>
+                    <!-- /voice-card__text -->
+                  </div>
+                  <!-- /voice-card__body -->
+                </div>
+    
+              </li>
+            </ul>
+          </div>
+          <div class="page-voice__pagination pagination">
+            <ul class="pagination__items">
+              <li class="pagination__item"><a>＜</a></li>
+              <li class="pagination__item js-current"><a>1</a></li>
+              <li class="pagination__item"><a>2</a></li>
+              <li class="pagination__item"><a>3</a></li>
+              <li class="pagination__item"><a>4</a></li>
+              <li class="pagination__item"><a>5</a></li>
+              <li class="pagination__item"><a>6</a></li>
+              <li class="pagination__item"><a>＞</a></li>
+            </ul>
+          </div>
+        </div>  
+      </div>  
 
       <section class="contact l-top-contact">
         <div class="contact__inner inner">

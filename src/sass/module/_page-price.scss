@@ -1,0 +1,34 @@
+@use 'global' as *;
+.page-price {
+  position: relative;
+}
+
+.page-price::before{
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-22);
+  left: calc(50% - 46vw);
+  z-index: -1;
+  
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-69);
+    left: calc(50% - min(49vw , rem(617)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-price__content {
+  margin: 0 auto;
+  max-width: rem(500);
+
+  @include mq('md') {
+    max-width: rem(700);
+    width: 100%;
+  }
+}

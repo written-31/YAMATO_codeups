@@ -1,0 +1,91 @@
+@use 'global' as *;
+@use 'global' as *;
+.page-voice {
+  position: relative;
+}
+
+.page-voice::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-22);
+  left: calc(50% - 46vw);
+  z-index: -1;
+  
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-69);
+    left: calc(50% - min(49vw , rem(617)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-voice__inner.inner {
+}
+
+.page-voice__tab {
+
+}
+
+.page-voice__tab-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(16) rem(20);
+  
+  @include mq('md') {
+    grid-template-columns: repeat(4, rem(162));
+    gap: rem(32);
+  }
+}
+
+.page-voice__tab-item.js-current {
+}
+
+.page-voice__tab-item a {
+  font-size: rem(14);
+  line-height: calc(22/14);
+  color: $color-accent;
+  background-color: $white;
+  padding: rem(5);
+  border: 1px solid $color-accent;
+  text-align: center;
+  display: inline-block;
+  min-width: rem(162);
+  width: 100%;
+  transition: .3s;
+}
+
+.page-voice__tab-item a:hover {
+  @include mq('md') {
+    color: $white;
+    background-color: $color-accent;
+    opacity: 1;
+  }
+}
+
+.page-voice__content {
+  margin-top: rem(40);
+}
+
+.page-voice__items {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: rem(39);
+
+  @include mq('md') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+  }
+}
+
+.page-voice__pagination {
+  margin-top: rem(80);
+
+  @include mq('md') {
+    margin-top: rem(70);
+  }
+}

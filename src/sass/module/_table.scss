@@ -1,0 +1,111 @@
+@use 'global' as *;
+.table {
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+  width: 100%;
+
+  @include mq('md') {
+    flex-direction: row;
+  }
+}
+
+.page-price__table:not(:first-child) {
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.table thead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-accent;
+  color: $white;
+
+  @include mq('md') {
+    width: rem(200);
+  }
+}
+
+.table__body{
+  flex-grow: 1;
+  // width: 100%;
+}
+
+.table th {
+  padding: rem(8) rem(32);
+
+  @include mq('md') {
+    padding: 0;
+  }
+}
+
+.table__header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: rem(16);
+  font-weight: $bold;
+
+  @include mq('md') {
+    flex-direction: column;
+  }
+}
+
+.table__header-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.table__header-icon img {
+  width: rem(24);
+  height: rem(24);
+  margin-right: rem(8);
+
+  @include mq('md') {
+    width: rem(64);
+    height: rem(64);
+    margin-right: 0;
+    margin-top: rem(8);
+  }
+}
+
+.table td {
+  height: rem(64);
+  border: 1px solid $color-accent;
+  display: grid;
+  place-content: center;
+  font-size: rem(16);
+  line-height: calc(24/16);
+
+  @include mq('md') {
+    padding: rem(18) rem(16);
+    display: inline;
+    place-content: initial;
+  }
+}
+
+.table__row {
+  display: flex;
+}
+
+.table__title {
+  width: 70%;
+  text-align: center;
+
+  @include mq('md') {
+    text-align: left;
+  }
+}
+
+.table__price {
+  width: 30%;
+  text-align: center;
+
+  @include mq('md') {
+    text-align: right;
+  }
+}

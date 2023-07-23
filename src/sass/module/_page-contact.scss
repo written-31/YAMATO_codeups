@@ -1,0 +1,47 @@
+@use 'global' as *;
+.page-contact {
+  position: relative;
+}
+
+.page-contact::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-23);
+  left: calc(50% - 46vw);
+  z-index: -1;
+
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-30);
+    left: calc(50% - min(49vw , rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-contact__form {
+  width: 100%;
+  @include mq('md') {
+    max-width: rem(700);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.page-contact__thanks {
+  text-align: center;
+}
+
+.page-contact__thanks p {
+  font-size: rem(16);
+  line-height: 1.5;
+  color: $color-main;
+}
+
+.page-contact__thanks p:nth-child(2) {
+  margin-top: rem(40);
+}

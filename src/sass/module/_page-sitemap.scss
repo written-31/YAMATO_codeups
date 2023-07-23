@@ -1,0 +1,26 @@
+@use 'global' as *;
+
+.page-sitemap {
+  position: relative;
+}
+
+.page-sitemap::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-23);
+  left: calc(50% - 46vw);
+  z-index: -1;
+
+  @include mq('md') {
+    background: initial;
+  }
+}
+
+.page-sitemap__content {
+  display: flex;
+  justify-content: center;
+}

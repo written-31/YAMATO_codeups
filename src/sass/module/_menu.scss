@@ -40,6 +40,11 @@
   margin-top: rem(18);
 }
 
+.menu__items--black li a {
+  color: $color-main;
+}
+
+
 .menu__item a {
   color: $white;
   font-weight: $normal;
@@ -48,6 +53,7 @@
   width: 100%;
   display: inline-block;
 }
+
 
 
 .menu__item.menu__item--first a {
@@ -62,4 +68,19 @@
   width: rem(18);
   height: rem(18);
   background-image: url(../images/common/icon_hitode.svg);
+}
+
+.menu__item.menu__item--first-icon a {
+  font-weight: $bold;
+}
+
+.menu__item.menu__item--first-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(3);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/icon_hitode-black.svg);
+
 }

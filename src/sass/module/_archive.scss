@@ -1,4 +1,28 @@
 @use 'global' as *;
+.archive {
+  position: relative;
+}
+
+.archive::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-31);
+  left: calc(50% - 46vw);
+  z-index: 1;
+
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-70);
+    left: calc(50% - min(49vw , rem(617)));
+    width: rem(301);
+    height: rem(138);
+    z-index: -1;
+  }
+}
 
 .archive__layout {
   width: 100%;
@@ -9,7 +33,7 @@
     "...  .....    ..." rem(80)
     "...  sidebar  ..." auto
     "...  .....    ..." auto
-    / auto calc(max(80% , rem(294)))
+    / auto calc(max(80% , rem(333)))
     auto;
   
   @include mq('md') {
@@ -17,7 +41,7 @@
       "... ...... ...... ......  ..."
       "...  main  ...... sidebar ..."
       "... ...... ...... ......  ..."
-      / auto auto rem(80) rem(333) auto;
+      / auto auto rem(80) rem(294) auto;
   }
 }
 
@@ -37,4 +61,10 @@
   margin-top: rem(80);
 }
 
+.archive__pagination-around {
+  margin-top: rem(40);
 
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}

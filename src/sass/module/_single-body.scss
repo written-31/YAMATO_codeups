@@ -1,0 +1,84 @@
+@use 'global' as *;
+
+.single-body__date {
+  font-size: rem(14);
+  line-height: calc(18/14);
+  font-family: $font-gotu;
+  color: $color-main;
+}
+
+.single-body__content {
+  margin-top: rem(8);
+  h2 {
+    font-size: rem(24);
+    line-height: 1.5;
+    color: $color-main;
+    padding-bottom: rem(4);
+    border-bottom: 1px solid $color-accent;
+
+    @include mq('md') {
+      font-size: rem(32);
+    }
+  }
+
+
+  div {
+    aspect-ratio: 345/231;
+    margin-top: rem(24);
+
+    @include mq('md') {
+    aspect-ratio: 700/468;
+    margin-top: rem(40);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  p {
+    font-size: rem(16);
+    line-height: calc(24/16);
+    color: $color-main;
+    margin-top: rem(24);
+
+    @include mq('md') {
+      margin-top: rem(40);
+    }
+  }
+
+  ul {
+    color: $color-main;
+    font-size: rem(16);
+    margin-top: rem(24);
+
+    @include mq('md') {
+      margin-top: rem(40);
+    }
+  }
+
+  li {
+    line-height: calc(24/16);
+    padding-left: rem(27);
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: rem(4);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: rem(18);
+      height: rem(18);
+      background: url(../images/common/icon_hitode-blue.svg);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  
+}

@@ -2,6 +2,14 @@
 .sidebar {
 
 }
+.sidebar__inner {
+  margin-right: rem(20);
+  margin-left: rem(20);
+  @include mq('md') {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 
 // ＝＝＝＝＝＝＝＝＝＝＝＝
 // 人気記事

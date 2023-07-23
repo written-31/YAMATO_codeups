@@ -1,0 +1,131 @@
+@use 'global' as *;
+.page-faq {
+  position: relative;
+}
+
+.page-faq::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background: url(../images/common/fish_right-sp.png) no-repeat center / cover;
+  width: rem(120);
+  height: rem(55);
+  top: rem(-22);
+  left: calc(50% - 46vw);
+  z-index: -1;
+  
+  @include mq('md') {
+    background: url(../images/common/fish_right.png) no-repeat center / cover;
+    top: rem(-69);
+    left: calc(50% - min(49vw , rem(617)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.page-faq__inner {
+
+}
+
+.page-faq__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-faq__accordion {
+  width: 100%;
+  background-color: #ffffff;
+
+  @include mq('md') {
+    max-width: rem(700);
+    width: 100%;
+  }
+}
+
+.page-faq__accordion:not([open]) {
+  margin-bottom: rem(40);
+}
+.page-faq__accordion[open] {
+  margin-bottom: rem(40);
+}
+
+.page-faq__accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #408f95;
+  color: #fff;
+  font-weight: $normal;
+  font-size: rem(16);
+  padding: rem(16);
+  cursor: pointer;
+
+  @include mq('md') {
+    padding: rem(26) rem(40);
+    font-size: rem(20);
+  }
+}
+
+.page-faq__accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-faq__accordion summary::before,
+.page-faq__accordion summary::after {
+  width: 1px;
+  height: rem(28);
+  background-color: #fff;
+  content: '';
+  
+  @include mq('md') {
+    height: rem(32);
+  }
+}
+
+.page-faq__accordion summary::before {
+  position: absolute;
+  rotate: 90deg;
+  right: rem(28);
+  
+  @include mq('md') {
+    right: rem(40);
+  }
+}
+
+.page-faq__accordion summary::after {
+  transition: rotate .3s;
+  position: absolute;
+  right: rem(28);
+
+  @include mq('md') {
+    position: initial;
+    right: initial;
+  }
+}
+
+.page-faq__accordion[open] summary::after {
+  rotate: 90deg;
+}
+
+.page-faq__accordion p {
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: rem(24) rem(16);
+  color: #0d2936;
+  font-size: rem(16);
+  border: 1px solid $color-accent;
+  transition: transform .5s, opacity .5s;
+  
+  @include mq('md') {
+    margin-top: rem(16);
+    padding: rem(40);
+  }
+}
+
+.page-faq__accordion[open] p {
+  transform: none;
+  opacity: 1;
+}

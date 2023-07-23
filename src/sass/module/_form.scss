@@ -1,0 +1,309 @@
+@use 'global' as *;
+
+.form__row {
+  display: flex;
+  flex-direction: column;
+  padding: rem(24) 0;
+  border-bottom: 1px dotted $color-accent;
+
+  @include mq('md') {
+    flex-direction: row;
+    padding: rem(40) 0;
+  }
+}
+
+
+.form__title {
+  font-size: rem(16);
+  color: $color-main;
+  font-weight: $bold;
+
+  @include mq('md') {
+    width: rem(220);
+  }
+}
+
+.form__body {
+  margin-top: rem(16);
+
+  @include mq('md') {
+    margin-top: 0;
+    width: calc(100% - rem(220));
+  }
+}
+.form__body--bn {
+  border: none;
+}
+.form__body--pn {
+  padding: 0;
+}
+
+.form__row textarea {
+  border: 1px solid $color-accent;
+  margin-top: rem(16);
+  height: rem(200);
+
+  @include mq('md') {
+    width: calc(100% - rem(220));
+    margin-top: 0;
+  }
+}
+
+
+.form__required {
+  font-weight: $normal;
+  color: $white;
+  background-color: #C94800;
+  font-size: rem(12);
+  letter-spacing: 0.4em;
+  padding: rem(2) rem(16);
+  margin-left: rem(8);
+  display: inline-block;
+}
+
+.form__agree {
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.form__agree label {
+  color: $black;
+  font-size: rem(14);
+}
+
+// inputの余白
+.form__row input,
+textarea {
+  padding: rem(8) rem(16);
+  border: 1px solid $color-accent;
+}
+
+
+
+
+
+// placeholderの色
+::placeholder {
+  color: $bg-accent;
+}
+/* 旧Edge対応 */
+::-ms-input-placeholder {
+  color: $bg-accent;
+}
+/* IE対応 */
+:-ms-input-placeholder {
+  color: $bg-accent;
+}
+
+
+
+// radio,checkbox　デフォルトを非表示
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+// radio,checkbox　カスタマイズクリック範囲
+input[type="checkbox"]+span {
+  display: block;
+  position: relative;
+  padding: rem(2) 0 rem(3) rem(22);
+  cursor: pointer;
+  // font-size: rem(16);
+}
+
+input[type="checkbox"]+.form__agree-btn {
+  padding: rem(2) 0 rem(3) rem(30);
+  @include mq('md') {
+    padding: rem(2) 0 rem(3) rem(38);
+    
+  }
+}
+
+
+// =====================
+// チェックボックス
+// =====================
+// チェックボックスのスタイル
+input[type="checkbox"]+span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: rem(14);
+  height: rem(14);
+  border: rem(1) solid $color-accent;
+  background: $white;
+}
+// agree-btn
+input[type="checkbox"]+.form__agree-btn::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  left: 0;
+  width: rem(22);
+  height: rem(22);
+  border: rem(1) solid $color-accent;
+  background: $white;
+  margin-right: rem(8);
+  
+  @include mq('md') {
+    margin-right: rem(16);
+    top: 25%;
+    transform: translateY(-25%);
+  }
+}
+
+// チェックボックスのチェック印(選択前)
+input[type="checkbox"]+span::after {
+
+  opacity: 0;
+  content: "";
+}
+
+// チェックボックスのチェック印(選択後)
+input[type="checkbox"]:checked+span::after {
+  // display: block;
+  opacity: 1;
+  position: absolute;
+  top: rem(9);
+  left: rem(5);
+  width: rem(5);
+  height: rem(9);
+  content: "";
+  border-bottom: rem(2) solid #C94800;
+  border-right: rem(2) solid #C94800;
+  transform: rotate(45deg);
+}
+input[type="checkbox"]:checked+.form__agree-btn::after {
+  top: rem(5);
+  left: rem(7);
+  width: rem(8);
+  height: rem(12);
+
+  @include mq('md') {
+    top: rem(3);
+    left: rem(7);
+    width: rem(8);
+    height: rem(12);
+  }
+}
+
+
+
+
+// =====================
+// セレクトボックス
+// =====================
+select {
+  appearance: none;
+  width: 100%;
+}
+
+.form__row select {
+  font-size: rem(12);
+  line-height: 1;
+}
+
+.form__select-wrap {
+  position: relative;
+  border: 1px solid $color-accent;
+
+  @include mq('md') {
+    margin-top: 0;
+
+  }
+}
+
+
+.form__select-wrap select {
+  padding: rem(8) rem(16);
+
+  @include mq('md') { 
+    padding: rem(10) rem(8) rem(10);
+  }
+}
+.form__select-wrap option {
+  line-height: 1.5;
+}
+
+.form__select-wrap::after {
+  position: absolute;
+  right: rem(8);
+  top: rem(1);
+  width: rem(12);
+  height: rem(12);
+  content: url(../images/common/icon_contact.svg);
+  display: block;
+
+  @include mq('md') {
+    right: rem(8);
+    top: 25%;
+    transform: translateY(-25%);
+  }
+}
+
+.form__button {
+  margin-top: rem(24);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+// =====================
+// フォーカス時
+// =====================
+/* フォーカス時に発光するスタイル */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none; /* デフォルトのフォーカスアウトラインを非表示にする */
+  box-shadow: 0 0 2px 2px $color-accent; /* 発光する色を設定 */
+}
+
+input[type="checkbox"]:focus+span::before {
+  outline: none; /* デフォルトのフォーカスアウトラインを非表示にする */
+  box-shadow: 0 0 2px 2px $color-accent; /* 発光する色を設定 */
+}
+
+
+
+// =====================
+// エラー時
+// =====================
+.form__error {
+  font-size: rem(14);
+  text-align: center;
+  color: #C94800;
+  display: none;
+}
+
+.form__body.error {
+  outline: 1px solid #C94800;
+  background-color: #F4DACC;
+  color: $white;
+}
+
+/* エラー時のborderを消すスタイル */
+.form__body.error .form__row input,
+.form__body.error textarea {
+  border: none;
+}
+
+
+.form__body.error .form__select-wrap {
+  border: none;
+}
+
+.form__body.error::placeholder {
+  color: $white;
+}

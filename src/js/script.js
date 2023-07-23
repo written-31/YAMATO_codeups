@@ -158,5 +158,32 @@ jQuery(function ($) {
       $('.information-contents__content--dn').eq(index).addClass('is-contents-active');
     });
   }); 
+
+
+  //formのエラー表示
+  $("#js-form").submit(function(event) {
+    event.preventDefault(); // フォームのデフォルトの送信をキャンセル
+
+    // 必須項目のチェック
+    $(".form__body").each(function() {
+      var inputVal = $(this).val().trim();
+      if (inputVal === "") {
+        // 必須項目が空欄の場合
+        $(this).addClass("error");
+      } else {
+        $(this).removeClass("error");
+      }
+    });
+
+    // エラーメッセージの表示と非表示の切り替え
+    if ($("#js-form .form__body.error").length > 0) {
+      // エラーメッセージを表示
+      $(".form__error").show();
+    } else {
+      // エラーメッセージを非表示
+      $(".form__error").hide();
+    }
+  });
 });
+
 
