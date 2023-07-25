@@ -70,6 +70,9 @@
 .sidebar__campaign-cards {
   margin-top: rem(40);
 }
+.sidebar__campaign-cards--sidebar {
+  margin-top: rem(30);
+}
 
 .sidebar__campaign-card + .sidebar__campaign-card {
   margin-top: rem(40);
@@ -125,8 +128,8 @@
   left: 0;
   top: 25%;
   // transform: translateY(-50%);
-  width: rem(24);
-  height: rem(24);
+  width: rem(22);
+  height: rem(22);
   display: inline-block;
   background: url(../images/common/icon_sankaku.svg) no-repeat center / contain;
   transition: .3s;

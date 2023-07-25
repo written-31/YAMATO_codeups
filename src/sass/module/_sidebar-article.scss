@@ -27,7 +27,8 @@
 
 .sidebar-article__body {
   color: $color-main;
-  width: calc(100% - rem(121));
+  width: calc(100% - rem(137));
+  flex-grow: 1;
 }
 
 .sidebar-article__date {

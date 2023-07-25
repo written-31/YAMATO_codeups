@@ -16,6 +16,14 @@
   }
 }
 
+.campaign-card__thumb--sidebar {
+  aspect-ratio: 294/188;
+  
+  @include mq('md') {
+    aspect-ratio: 294/188;
+  }
+}
+
 .campaign-card__thumb img {
   width: 100%;
   height: 100%;
@@ -42,7 +50,14 @@
 }
 .campaign-card__body--padding {
   @include mq('md') {
-    padding: rem(16) rem(16) rem(24);
+    padding: rem(24) rem(24) rem(45);
+  }
+}
+.campaign-card__body--sidebar {
+  padding: rem(0) rem(16) rem(24);
+
+  @include mq('md') {
+    padding: rem(0) rem(23) rem(24);
   }
 }
 
@@ -58,14 +73,27 @@
   padding-bottom: rem(8);
   // border-bottom: 1px solid $color-accent;
 }
+.campaign-card__title--pc {
+  @include mq('md') {
+    font-size: rem(24);
+    padding-bottom: 0;
+  }
+}
 
 .campaign-card__wrap {
   position: relative;
   padding-top: rem(8);
   margin-top: auto;
+  width: 100%;
 
   @include mq('md') {
     padding-top: rem(16);
+  }
+}
+
+.campaign-card__wrap--pt {
+  @include mq('md') {
+    padding-top: rem(24);
   }
 }
 .campaign-card__wrap--center {
@@ -142,6 +170,12 @@
     font-size: rem(24);
   }
 }
+.campaign-card__discount-before--sidebar {
+  @include mq('md') {
+    font-size: rem(20);
+  }
+}
+
 .campaign-card__discount-before span::before {
   content: "";
   position: absolute;
@@ -167,6 +201,11 @@
   }
 }
 
+.campaign-card__discount-after--sidebar {
+  @include mq('md') {
+    font-size: rem(32);
+  }
+}
 
 // campaignページ
 .campaign-card__footer {
@@ -179,7 +218,14 @@
     font-size: rem(16);
     line-height: calc(24/16);
   }
+}
+.campaign-card__text--sidebar {
+  font-size: rem(14);
+  line-height: calc(24/14);
 
+  @include mq('md') {
+    font-size: rem(14);
+  }
 }
 
 .campaign-card__date {

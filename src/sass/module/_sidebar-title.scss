@@ -1,18 +1,26 @@
 @use 'global' as *;
 .sidebar-title {
-  padding-left: rem(24);
+  padding-left: rem(14);
   display: flex;
   align-items: center;
   border-left: rem(8) solid $color-accent;
   position: relative;
   color: $color-main;
+
+  @include mq('md') {
+    padding-left: rem(16);
+  }
 }
 
 .sidebar-title h3 {
   font-size: rem(24);
   font-weight: $normal;
   line-height: calc(50/24);
-  margin-left: rem(13);
+  margin-left: rem(8);
+  
+  @include mq('md') {
+    margin-left: rem(8);
+  }
 }
 
 .sidebar-title img {
