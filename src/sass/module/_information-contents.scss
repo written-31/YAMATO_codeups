@@ -14,13 +14,13 @@
   }
 }
 
-.information-contents__content + .information-contents__content {
-  margin-top: rem(16);
+// .information-contents__content + .information-contents__content {
+//   margin-top: rem(16);
 
-  @include mq('md') {
-    margin-top: rem(40);
-  }
-}
+//   @include mq('md') {
+//     margin-top: rem(40);
+//   }
+// }
 
 .information-contents__content--dn {
   display: none;

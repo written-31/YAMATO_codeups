@@ -10,3 +10,12 @@
 .common-footer--mt {
   margin-top: rem(144);
 }
+
+.common-footer--mt0 {
+  margin-top: 0;
+
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+

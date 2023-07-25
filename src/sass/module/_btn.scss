@@ -74,9 +74,6 @@
 
 
 
-
-
-
 // ボタンの矢印
 .btn span::before {
   content: "";
@@ -114,6 +111,52 @@
 }
 
 
+// --------------------
+// 白ボタン
+// --------------------
+.btn--white {
+  color: $color-accent;
+  background-color: $white;
+  border: 1px solid $white;
 
+}
 
+.btn.btn--white::before {
+  border: 1px solid $white;
+}
+
+// スライドアニメーション
+.btn.btn--white.slide {
+  @include mq('md') {
+    color: $color-accent;
+    background-color: $white;
+  }
+}
+.btn.btn--white.slide::after {
+  @include mq('md') {
+    background-color: $color-accent;
+  }
+}
+.btn.btn--white.slide:hover {
+  @include mq('md') {
+    background-color: $white;
+    color: $white;
+  }
+}
+
+// ボタンの矢印
+.btn.btn--white span::before {
+  background-color: $color-accent;
+}
+
+.btn.btn--white span::after {
+  background-color: $color-accent;
+}
+
+.btn.btn--white:hover span::before,
+.btn.btn--white:hover span::after {
+  @include mq('md') {
+    background-color: $white;
+  }
+}
 

@@ -65,7 +65,35 @@
 .page-information__tab-icon {
   @include mq('md') {
     margin-right: 8px;
+    width: rem(64);
+    height: rem(64);
+    position: relative;
   }
+}
+
+.page-information__tab-icon::after {
+  content: "";
+	position: absolute;
+	top: 50%;
+	// right: 0;
+  left: 0;
+	transform: translateY(-50%);
+	width: rem(64);
+	height: rem(64);
+	mask-size: 100% auto;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	background: $color-accent;
+}
+
+.page-information__tab-icon--1::after{
+	mask-image: url('../images/common/icon_info1.svg');
+}
+.page-information__tab-icon--2::after{
+	mask-image: url('../images/common/icon_info2.svg');
+}
+.page-information__tab-icon--3::after{
+	mask-image: url('../images/common/icon_info3.svg');
 }
 
 
@@ -76,15 +104,11 @@
     opacity: 1;
   }
 }
-
-.page-information__tab-item:hover .page-information__tab-icon svg path {
+.page-information__tab-item:hover .page-information__tab-icon::after{
   @include mq('md') {
-    // filter: none;
-    transition: .3s;
-    fill: $white;
+    background: $white;
   }
 }
-
 
 .page-information__contents {
   margin-top: rem(16);
@@ -99,11 +123,6 @@
   background: $color-accent;
 }
 
-
-.js-contents-active{
-  display: block;
-}
-
-.js-btn-active .page-information__tab-icon svg path {
-  fill: $white;
+.js-btn-active .page-information__tab-icon::after {
+  background: $white;
 }

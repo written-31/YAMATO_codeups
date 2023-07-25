@@ -1,0 +1,75 @@
+@use 'global' as *;
+.page-404 {
+  padding-top: rem(160);
+  padding-bottom: rem(40);
+  background-color: $color-accent;
+  position: relative;
+
+  @include mq('md') {
+    padding-top: rem(237);
+    padding-bottom: rem(148);
+  }
+}
+
+
+.page-404::before {
+  content: "";
+  background: url(../images/common/404_sp.png) center / cover no-repeat;
+  position: absolute;
+  z-index: 1;
+  top: rem(80);
+  left: 0;
+  right: 0;
+  aspect-ratio: 1/1;
+
+  @include mq('md') {
+    background: url(../images/common/404_pc.png) center / cover no-repeat;
+    top: rem(90);
+    left: calc(50% - min(49vw , rem(562)));
+    width: rem(698);
+    aspect-ratio: 1/1;
+  }
+}
+
+
+
+.page-404__bread {
+  position: absolute;
+  content: "";
+  top: rem(88);
+  color: $white;
+
+
+  @include mq('md') {
+    top: rem(98);
+  }
+}
+
+.page-404__content {
+  text-align: center;
+}
+
+.page-404__title {
+  color: $white;
+  font-size: rem(80);
+  font-weight: $regular;
+  letter-spacing: .5em;
+
+  @include mq('md') {
+    font-size: rem(160);
+  }
+}
+
+.page-404__text {
+  color: $white;
+  font-size: rem(16);
+  line-height: calc(24/16);
+}
+
+.page-404__btn {
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}

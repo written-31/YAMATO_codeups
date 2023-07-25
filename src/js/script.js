@@ -148,17 +148,21 @@ jQuery(function ($) {
     });
 
   // tab切り替え
-  $(function(){
-    $('.page-information__tab-item').on('click', function(){
-      let index = $('.page-information__tab-item').index(this);
-  
-      $('.page-information__tab-item').removeClass('js-btn-active');
-      $(this).addClass('js-btn-active');
-      $('.information-contents__content--dn').removeClass('is-contents-active');
-      $('.information-contents__content--dn').eq(index).addClass('is-contents-active');
+  $(function () {
+    //最初のコンテンツ以外は非表示
+    $(".information-contents__content:not(:first-of-type)").css("display", "none");
+    //タブをクリックしたら
+    $(".page-information__tab-item").on("click", function () {
+      //現在選択中のタブからcurrentクラスを外す
+      $(".js-btn-active").removeClass("js-btn-active");
+      //クリックしたタブにcurrentクラスを付与
+      $(this).addClass("js-btn-active");
+      //クリックしたタブのインデックス番号を取得
+      const index = $(this).index();
+      //コンテンツを非表示、クリックしたタブのインデックス番号と同じコンテンツを表示
+      $(".information-contents__content").hide().eq(index).show();
     });
-  }); 
-
+  });
 
   //formのエラー表示
   $("#js-form").submit(function(event) {
