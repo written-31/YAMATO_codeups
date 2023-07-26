@@ -44,7 +44,7 @@
   font-size: rem(16);
   color: $color-main;
   font-weight: $normal;
-  line-height: 2;
+  line-height: calc(32/16);
 
   @include mq('md') {
     max-width: rem(800);
@@ -53,13 +53,28 @@
 }
 
 .page-privacy__text {
-  margin-top: rem(40);
+  margin-top: rem(31);
+
+  @include mq('md') {
+    margin-top: rem(35);
+  }
 }
 
 .page-privacy__items {
-  margin-top: rem(40);
+  // margin-top: rem(30);
   padding-left: 1em;
   list-style: decimal;
+
+  @include mq('md') {
+    // margin-top: rem(40);
+  }
+}
+.page-privacy__items--first {
+  margin-top: rem(33);
+
+  @include mq('md') {
+    margin-top: rem(40);
+  }
 }
 
 .page-privacy__items--mt0 {

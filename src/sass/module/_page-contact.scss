@@ -16,7 +16,7 @@
 
   @include mq('md') {
     background: url(../images/common/fish_right.png) no-repeat center / cover;
-    top: rem(-30);
+    top: rem(-70);
     left: calc(50% - min(49vw , rem(620)));
     width: rem(301);
     height: rem(138);
@@ -43,5 +43,5 @@
 }
 
 .page-contact__thanks p:nth-child(2) {
-  margin-top: rem(40);
+  margin-top: rem(33);
 }

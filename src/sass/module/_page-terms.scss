@@ -54,12 +54,21 @@
 
 .page-terms__text {
   margin-top: rem(40);
+  
+}
+
+.page-terms__text--first{
+  margin-top: rem(30);
 }
 
 .page-terms__items {
-  margin-top: rem(40);
+  margin-top: rem(35);
   padding-left: 1em;
   list-style: decimal;
+
+  @include mq('md') {
+    margin-top: rem(35);
+  }
 }
 
 .page-terms__items--mt0 {

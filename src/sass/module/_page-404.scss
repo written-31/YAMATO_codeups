@@ -36,12 +36,12 @@
 .page-404__bread {
   position: absolute;
   content: "";
-  top: rem(88);
+  top: rem(80);
   color: $white;
 
 
   @include mq('md') {
-    top: rem(98);
+    top: rem(90);
   }
 }
 
@@ -52,8 +52,11 @@
 .page-404__title {
   color: $white;
   font-size: rem(80);
-  font-weight: $regular;
+  font-weight: $normal;
   letter-spacing: .5em;
+  text-indent: .5em;
+  line-height: 1;
+  display: inline-block;
 
   @include mq('md') {
     font-size: rem(160);
@@ -64,6 +67,11 @@
   color: $white;
   font-size: rem(16);
   line-height: calc(24/16);
+  margin-top: rem(10);
+
+  @include mq('md') {
+    margin-top: rem(55);
+  }
 }
 
 .page-404__btn {

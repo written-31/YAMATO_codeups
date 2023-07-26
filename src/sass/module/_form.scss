@@ -3,12 +3,20 @@
 .form__row {
   display: flex;
   flex-direction: column;
-  padding: rem(24) 0;
+  padding: rem(20) 0;
   border-bottom: 1px dotted $color-accent;
 
   @include mq('md') {
     flex-direction: row;
-    padding: rem(40) 0;
+    padding: rem(37) 0;
+  }
+}
+
+.form__row--pt0 {
+  padding: 0 0 rem(20);
+
+  @include mq('md') {
+    padding: 0 0 rem(37);
   }
 }
 
@@ -56,7 +64,7 @@
   background-color: #C94800;
   font-size: rem(12);
   letter-spacing: 0.4em;
-  padding: rem(2) rem(16);
+  padding: rem(2) rem(14);
   margin-left: rem(8);
   display: inline-block;
 }
@@ -224,7 +232,7 @@ select {
 
 
 .form__select-wrap select {
-  padding: rem(8) rem(16);
+  padding: rem(16) rem(8);
 
   @include mq('md') { 
     padding: rem(10) rem(8) rem(10);
