@@ -61,6 +61,7 @@
   font-size: rem(16);
   padding: rem(16) rem(16) rem(15);
   cursor: pointer;
+  transition: .3s;
 
   @include mq('md') {
     padding: rem(25) rem(40);
@@ -78,6 +79,7 @@
   height: rem(28);
   background-color: #fff;
   content: '';
+  transition: .3s;
   
   @include mq('md') {
     height: rem(32);
@@ -86,7 +88,8 @@
 
 .page-faq__accordion summary::before {
   position: absolute;
-  rotate: 90deg;
+  // rotate: 90deg;
+  transform: rotate(90deg);
   right: rem(28);
   
   @include mq('md') {
@@ -106,7 +109,9 @@
 }
 
 .page-faq__accordion[open] summary::after {
-  rotate: 90deg;
+  // rotate: 90deg;
+  transition: .3s;
+  transform: rotate(90deg);
 }
 
 .page-faq__accordion p {

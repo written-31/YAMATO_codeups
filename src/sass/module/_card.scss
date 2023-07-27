@@ -8,11 +8,29 @@
 
 .card__thumb {
   background-color: $white;
+  @include mq('md') {
+    overflow: hidden;
+  }
 }
 
 .card__thumb img {
   aspect-ratio: 301/201;
   object-fit: cover;
+
+  @include mq('md') {
+    transition: transform .5s ease;
+  }
+}
+
+.card:hover .card__thumb img {
+  @include mq('md') {
+    transform: scale(1.1);
+  }
+}
+.card:hover {
+  @include mq('md') {
+    opacity: 1;
+  }
 }
 
 .card__body {
