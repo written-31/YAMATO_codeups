@@ -1,0 +1,38 @@
+@use 'global' as *;
+.common-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(16) rem(20);
+  
+  @include mq('md') {
+    grid-template-columns: repeat(4, rem(162));
+    gap: rem(32);
+  }
+}
+
+.common-tabs__tab.is-current a {
+  background-color: $color-accent;
+  color: $white;
+}
+
+.common-tabs__tab a {
+  font-size: rem(14);
+  line-height: calc(22/14);
+  color: $color-accent;
+  background-color: $white;
+  padding: rem(5);
+  border: 1px solid $color-accent;
+  text-align: center;
+  display: inline-block;
+  min-width: rem(162);
+  width: 100%;
+  transition: .3s;
+}
+
+.common-tabs__tab a:hover {
+  @include mq('md') {
+    color: $white;
+    background-color: $color-accent;
+    opacity: 1;
+  }
+}

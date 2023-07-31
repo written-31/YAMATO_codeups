@@ -4,6 +4,9 @@
   flex-direction: column;
   border-collapse: collapse;
   width: 100%;
+  border-right: 1px solid $color-accent;
+  border-bottom: 1px solid $color-accent;
+  border-spacing: 0;
 
   @include mq('md') {
     flex-direction: row;
@@ -75,12 +78,13 @@
 
 .table td {
   height: rem(60);
-  border: 1px solid $color-accent;
+  border-top: 1px solid $color-accent;
+  border-left: 1px solid $color-accent;
   display: grid;
   place-content: center;
   font-size: rem(16);
   line-height: calc(24/16);
-
+  
   @include mq('md') {
     height: initial;
     padding: rem(16) rem(16) rem(17);
@@ -91,6 +95,7 @@
 
 .table__row {
   display: flex;
+  // margin-bottom: -1px;
 }
 
 .table__title {

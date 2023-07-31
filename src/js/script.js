@@ -93,10 +93,8 @@ jQuery(function ($) {
     });
   });
 
-
-    
   // ページトップボタン
-  var topBtn = $('#js-pagetop');
+  var topBtn = $("#js-pagetop");
   topBtn.hide();
 
   // ページトップボタンの表示設定
@@ -112,45 +110,51 @@ jQuery(function ($) {
 
   // ページトップボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      300,
+      "swing"
+    );
     return false;
   });
 
-
-  $(document).ready(function() {
-    var pagetop = $('#js-pagetop');
-    var svgPath = pagetop.find('svg path');
-    var footer = $('footer');
+  $(document).ready(function () {
+    var pagetop = $("#js-pagetop");
+    var svgPath = pagetop.find("svg path");
+    var footer = $("footer");
     var footerHeight = footer.outerHeight();
-  
-    $(window).scroll(function() {
+
+    $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
       var scrollBottom = scrollTop + windowHeight;
-  
+
       if (scrollBottom >= footer.offset().top) {
-        pagetop.css('border-color', '#fff');
-        svgPath.css('stroke', '#fff'); // SVGパスの色を変更
+        pagetop.css("border-color", "#fff");
+        svgPath.css("stroke", "#fff"); // SVGパスの色を変更
       } else {
-        pagetop.css('border-color', '');
-        svgPath.css('stroke', ''); // デフォルトの色に戻す
+        pagetop.css("border-color", "");
+        svgPath.css("stroke", ""); // デフォルトの色に戻す
       }
     });
   });
-  
+
   // galleryのモーダルポップアップ
-    MicroModal.init({
-      awaitCloseAnimation: true,
-      awaitOpenAnimation: true,
-      disableScroll: true,
-    });
+  MicroModal.init({
+    awaitCloseAnimation: true,
+    awaitOpenAnimation: true,
+    disableScroll: true,
+  });
 
   // tab切り替え
   $(function () {
     //最初のコンテンツ以外は非表示
-    $(".information-contents__content:not(:first-of-type)").css("display", "none");
+    $(".information-contents__content:not(:first-of-type)").css(
+      "display",
+      "none"
+    );
     //タブをクリックしたら
     $(".page-information__tab-item").on("click", function () {
       //現在選択中のタブからcurrentクラスを外す
@@ -165,11 +169,11 @@ jQuery(function ($) {
   });
 
   //formのエラー表示
-  $("#js-form").submit(function(event) {
+  $("#js-form").submit(function (event) {
     event.preventDefault(); // フォームのデフォルトの送信をキャンセル
 
     // 必須項目のチェック
-    $(".form__body").each(function() {
+    $(".form__body").each(function () {
       var inputVal = $(this).val().trim();
       if (inputVal === "") {
         // 必須項目が空欄の場合
@@ -188,6 +192,4 @@ jQuery(function ($) {
       $(".form__error").hide();
     }
   });
-});
-
 

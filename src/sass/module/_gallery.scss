@@ -32,15 +32,16 @@
 .gallery__container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-auto-flow: dense;
+  // grid-template-columns: 1fr;
   gap: rem(8);
   margin-top: rem(40);
 
   @include mq('md') {
-    height: rem(1500);
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    // grid-template-columns: repeat(9, 1fr);
+    // grid-template-rows: repeat(8, 1fr);
     margin-top: rem(80);
+    grid-template-columns: repeat(11, 1fr);
   }
 }
 
@@ -64,37 +65,76 @@
   }
 }
 
-.gallery__button1 {
+.gallery__button:nth-child(6n+1) {
+  grid-row: span 2;
   @include mq('md') {
-    grid-area: 1 / 1 / 5 / 5; 
+    grid-column: span 5;
   }
 }
 
-.gallery__button2 {
+.gallery__button:nth-child(6n+2) {
+  grid-row: span 1;
   @include mq('md') {
-    grid-area: 1 / 5 / 3 / 10;
-  }}
+    grid-column: span 6;
+  }
+}
 
-.gallery__button3 {
+.gallery__button:nth-child(6n+3) {
+  grid-row: span 1;
   @include mq('md') {
-    grid-area: 3 / 5 / 5 / 10; 
-  }}
+    grid-column: span 6;
+  }
+}
 
-.gallery__button4 {
+.gallery__button:nth-child(6n+4) {
+  grid-row: span 1;
   @include mq('md') {
-    grid-area: 5 / 1 / 7 / 6;
-  }}
+    grid-column: span 6;
+  }
+}
 
-.gallery__button5 {
+.gallery__button:nth-child(6n+5) {
+  grid-row: span 1;
   @include mq('md') {
-    grid-area: 7 / 1 / 9 / 6; 
-  }}
+    grid-column: span 6;
+  }
+}
 
-.gallery__button6 {
+.gallery__button:nth-child(6n+6) {
+  grid-row: span 2;
   @include mq('md') {
-    grid-area: 5 / 6 / 9 / 10;
-  }}
+    grid-column: span 5;
+  }
+}
 
+.gallery__button img {
+  aspect-ratio: 345/219;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 580/369;
+    cursor: pointer;
+  }
+}
+
+.gallery__button:nth-child(6n+1) img,
+.gallery__button:nth-child(6n+6) img {
+  aspect-ratio: 345/524;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 492/746;
+    cursor: pointer;
+  }
+}
+
+
+// modal
+.modal__overlay {
+  z-index: 100;
+}
 
 
 

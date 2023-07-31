@@ -26,45 +26,6 @@
 .page-campaign__inner.inner {
 }
 
-.page-campaign__tab {
-
-}
-
-.page-campaign__tab-items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: rem(16) rem(20);
-  
-  @include mq('md') {
-    grid-template-columns: repeat(4, rem(162));
-    gap: rem(32);
-  }
-}
-
-.page-campaign__tab-item.js-current {
-}
-
-.page-campaign__tab-item a {
-  font-size: rem(14);
-  line-height: calc(22/14);
-  color: $color-accent;
-  background-color: $white;
-  padding: rem(5);
-  border: 1px solid $color-accent;
-  text-align: center;
-  display: inline-block;
-  min-width: rem(162);
-  width: 100%;
-  transition: .3s;
-}
-
-.page-campaign__tab-item a:hover {
-  @include mq('md') {
-    color: $white;
-    background-color: $color-accent;
-    opacity: 1;
-  }
-}
 
 .page-campaign__content {
   margin-top: rem(40);
