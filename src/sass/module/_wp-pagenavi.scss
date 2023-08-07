@@ -1,0 +1,70 @@
+@use 'global' as *;
+.wp-pagenavi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(12);
+}
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  font-size: rem(16);
+  font-weight: $bold;
+  font-family: $font-lato;
+  width: rem(38);
+  height: rem(38);
+  display: grid;
+  place-content: center;
+  border: 1px solid $color-accent;
+  color: $color-accent;
+  transition: .3s;
+}
+
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover{
+  @include mq('md') {
+    color: $white;
+    background-color: $color-accent;
+    opacity: 1;
+  }
+}
+
+.wp-pagenavi .previouspostslink {
+  margin-right: rem(40);
+}
+
+.wp-pagenavi .nextpostslink {
+  margin-left: rem(40);
+}
+
+.wp-pagenavi .page {
+  font-size: rem(16);
+  font-weight: $bold;
+  font-family: $font-lato;
+  width: rem(38);
+  height: rem(38);
+  display: grid;
+  place-content: center;
+  border: 1px solid $color-accent;
+  color: $color-accent;
+  transition: .3s;
+}
+.wp-pagenavi .page:hover {
+  @include mq('md') {
+    color: $white;
+    background-color: $color-accent;
+    opacity: 1;
+  }
+}
+// 現在のページ番号
+.wp-pagenavi .current {
+  font-size: rem(16);
+  font-weight: $bold;
+  font-family: $font-lato;
+  width: rem(38);
+  height: rem(38);
+  display: grid;
+  place-content: center;
+  transition: .3s;
+  color: $white;
+  background-color: $color-accent;
+}
