@@ -12,7 +12,7 @@ $privacy = esc_url(home_url('/privacy/'));
 $terms = esc_url(home_url('/terms/'));
 ?>
 
-<?php if (!is_page('contact')) : ?>
+<?php if (!is_page('contact') && !is_404()) : ?>
   <section class="contact l-top-contact">
     <div class="contact__inner inner">
       <div class="contact__wrapper">
@@ -52,7 +52,11 @@ $terms = esc_url(home_url('/terms/'));
 <?php endif; ?>
 
 </main>
-<footer class="footer common-footer">
+<footer <?php if (is_404()) {
+          echo 'class="footer"';
+        } else {
+          echo 'class="common-footer footer"';
+        } ?>>
   <div class="footer__wrapper">
     <div class="footer__head">
       <div class="footer__logo">
@@ -221,9 +225,6 @@ $terms = esc_url(home_url('/terms/'));
     <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round" />
   </svg>
 </a><!-- /pagetop -->
-</body>
-
-</html>
 
 <?php wp_footer(); ?>
 </body>

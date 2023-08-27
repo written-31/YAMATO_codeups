@@ -20,15 +20,24 @@
     <div class="page-campaign__inner inner">
       <div class="page-campaign__tab">
         <ul class="common-tabs">
-          <li class="common-tabs__tab is-current"><a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>">ALL</a></li>
+          <?php
+          $cat = get_queried_object();
+          $cat_name = $cat->name;
+          ?>
+
+          <li class="common-tabs__tab"><a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>">ALL</a></li>
           <?php
           $taxonomy_terms = get_terms('course', array('hide_empty' => false));
           foreach ($taxonomy_terms as $taxonomy_term) :
           ?>
-            <li class="common-tabs__tab"><a href="<?php echo esc_url( get_term_link( $taxonomy_term, 'course' ) ); ?>"><?php echo esc_html( $taxonomy_term->name ); ?></a></li>
+            <li class="common-tabs__tab <?php
+            if ($cat_name == esc_html($taxonomy_term->name)) {
+              echo "is-current";
+            } ?>"><a href="<?php echo esc_url(get_term_link($taxonomy_term, 'course')); ?>"><?php echo esc_html($taxonomy_term->name); ?></a></li>
           <?php endforeach; ?>
         </ul>
       </div>
+
       <div class="page-campaign__content">
         <ul class="page-campaign__items">
           <?php

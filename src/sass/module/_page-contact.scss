@@ -25,12 +25,58 @@
 
 .page-contact__form {
   width: 100%;
+
   @include mq('md') {
     max-width: rem(700);
     width: 100%;
     margin: 0 auto;
   }
 }
+
+// mw wp form
+.page-contact__agree {
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.page-contact__agree label {
+  color: $black;
+  font-size: rem(14);
+}
+
+.page-contact__button {
+  margin-top: rem(24);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+// 同意
+.page-contact__agree label {
+  display: inherit;
+}
+
+
+// .mwform-checkbox-field-text::before {
+//   display: none;
+// }
+
+
+// .wpcf7-form {
+//   width: 100%;
+//   @include mq('md') {
+//     max-width: rem(700);
+//     width: 100%;
+//     margin: 0 auto;
+//   }
+// }
 
 .page-contact__thanks {
   text-align: center;

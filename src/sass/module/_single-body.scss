@@ -21,6 +21,15 @@
     }
   }
 
+  figure {
+    aspect-ratio: 345/231;
+    margin-top: rem(24);
+
+    @include mq('md') {
+    aspect-ratio: 700/468;
+    margin-top: rem(40);
+  }
+  }
 
   div {
     aspect-ratio: 345/231;
@@ -79,6 +88,5 @@
       transform: translateY(-50%);
     }
   }
-
-  
 }
+  

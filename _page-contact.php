@@ -15,17 +15,11 @@
   <!-- /fv -->
   <?php get_template_part('breadcrumb'); ?>
 
-  <?php while (have_posts()) : ?>
-    <?php the_post(); ?>
 
-    <section class="page-contact l-page-contact">
-      <div class="page-contact__inner inner">
-        <div class="page-contact__form">
-          <p class="form__error">※必須項目が入力されていません。入力してください。</p>
-          <div><?php the_content(); ?></div>
-        </div>
-      </div>
-    </section>
+  <section class="page-contact l-page-contact">
+    <div class="page-contact__inner inner">
+    <?php echo do_shortcode('[contact-form-7 id="7cf4328" title="コンタクトフォーム 1"]'); ?>
+    </div>
+  </section>
 
-  <?php endwhile; ?>
   <?php get_footer(); ?>

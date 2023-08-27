@@ -1,64 +1,13 @@
 @use 'global' as *;
-
-.form__row {
-  display: flex;
-  flex-direction: column;
-  padding: rem(20) 0;
-  border-bottom: 1px dotted $color-accent;
-
-  @include mq('md') {
-    flex-direction: row;
-    padding: rem(37) 0;
-  }
+.contact-table {
+  // margin: 0 auto;
+  width: 100%;
+}
+.contact-table tbody {
+  width: 100%;
 }
 
-.form__row--pt0 {
-  padding: 0 0 rem(20);
-
-  @include mq('md') {
-    padding: 0 0 rem(37);
-  }
-}
-
-
-.form__title {
-  font-size: rem(16);
-  color: $color-main;
-  font-weight: $bold;
-
-  @include mq('md') {
-    width: rem(220);
-  }
-}
-
-.form__body {
-  margin-top: rem(16);
-
-  @include mq('md') {
-    margin-top: 0;
-    width: calc(100% - rem(220));
-  }
-}
-.form__body--bn {
-  border: none;
-}
-.form__body--pn {
-  padding: 0;
-}
-
-.form__row textarea {
-  border: 1px solid $color-accent;
-  margin-top: rem(16);
-  height: rem(200);
-
-  @include mq('md') {
-    width: calc(100% - rem(220));
-    margin-top: 0;
-  }
-}
-
-
-.form__required {
+.contact-table__required {
   font-weight: $normal;
   color: $white;
   background-color: #C94800;
@@ -69,51 +18,66 @@
   display: inline-block;
 }
 
-.form__agree {
-  margin-top: rem(40);
+.contact-table__row {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: rem(20) 0;
+  border-bottom: 1px dotted $color-accent;
+  width: 100%;
 
   @include mq('md') {
-    margin-top: rem(80);
+    flex-direction: row;
+    padding: rem(37) 0;
   }
 }
 
-.form__agree label {
-  color: $black;
-  font-size: rem(14);
+.contact-table__row th {
+  font-size: rem(16);
+  color: $color-main;
+  font-weight: $bold;
+  text-align: left;
+
+  @include mq('md') {
+    width: rem(220);
+  }
 }
+
+.contact-table__row td {
+  width: 100%;
+  margin-top: rem(16);
+
+  @include mq('md') {
+    width: calc(100% - rem(220));
+    margin-top: 0;
+  }
+}
+
+
 
 // inputの余白
-.form__row input,
-textarea {
+.contact-table__row input,
+.contact-table__row textarea,
+.contact-table__row select {
+  display: inline-block;
   padding: rem(8) rem(16);
   border: 1px solid $color-accent;
+  width: 100%;
 }
 
-
-
-
-
-// placeholderの色
-::placeholder {
-  color: $bg-accent;
-}
-/* 旧Edge対応 */
-::-ms-input-placeholder {
-  color: $bg-accent;
-}
-/* IE対応 */
-:-ms-input-placeholder {
-  color: $bg-accent;
+.contact-table__row textarea {
+  min-height: rem(200);
 }
 
-
+.contact-table__check label {
+  box-sizing: border-box; /* padding や border も要素の幅に含める */
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
 
 // radio,checkbox　デフォルトを非表示
 input[type="checkbox"] {
-  opacity: 0;
-  position: absolute;
+  display: none;
 }
 
 // radio,checkbox　カスタマイズクリック範囲
@@ -125,7 +89,7 @@ input[type="checkbox"]+span {
   // font-size: rem(16);
 }
 
-input[type="checkbox"]+.form__agree-btn {
+input[type="checkbox"]+.page-contact__agree-btn {
   padding: rem(2) 0 rem(3) rem(30);
   @include mq('md') {
     padding: rem(2) 0 rem(3) rem(38);
@@ -137,6 +101,10 @@ input[type="checkbox"]+.form__agree-btn {
 // =====================
 // チェックボックス
 // =====================
+.contact-table__check {
+  display: flex;
+  flex-direction: column;
+}
 // チェックボックスのスタイル
 input[type="checkbox"]+span::before {
   content: "";
@@ -150,7 +118,7 @@ input[type="checkbox"]+span::before {
   background: $white;
 }
 // agree-btn
-input[type="checkbox"]+.form__agree-btn::before {
+.page-contact__agree input[type=checkbox] + span::before {
   content: "";
   position: absolute;
   top: 25%;
@@ -167,6 +135,10 @@ input[type="checkbox"]+.form__agree-btn::before {
     top: 25%;
     transform: translateY(-25%);
   }
+}
+
+.page-contact__agree input[type=checkbox] + span {
+  padding: rem(2) 0 rem(2) rem(30);
 }
 
 // チェックボックスのチェック印(選択前)
@@ -190,9 +162,9 @@ input[type="checkbox"]:checked+span::after {
   border-right: rem(2) solid #C94800;
   transform: rotate(45deg);
 }
-input[type="checkbox"]:checked+.form__agree-btn::after {
+.page-contact__agree input[type=checkbox]:checked + span::after {
   top: rem(5);
-  left: rem(7);
+  left: rem(6);
   width: rem(8);
   height: rem(12);
 
@@ -204,8 +176,17 @@ input[type="checkbox"]:checked+.form__agree-btn::after {
   }
 }
 
+// mw wp form checkbox
+.mwform-checkbox-field {
+  // display: inline-block;
+}
+.horizontal-item {
+  display: inline-block;
+}
 
-
+.mw_wp_form .horizontal-item + .horizontal-item {
+  margin-left: 0;
+}
 
 // =====================
 // セレクトボックス
@@ -220,51 +201,41 @@ select {
   line-height: 1;
 }
 
-.form__select-wrap {
+.page-contact__select-wrap {
   position: relative;
-  border: 1px solid $color-accent;
-
-  @include mq('md') {
-    margin-top: 0;
-
-  }
 }
 
 
-.form__select-wrap select {
-  padding: rem(16) rem(8);
+.page-contact__select-wrap select {
+  padding: rem(12) rem(8);
 
   @include mq('md') { 
     padding: rem(10) rem(8) rem(10);
   }
 }
-.form__select-wrap option {
+.page-contact__select-wrap option {
   line-height: 1.5;
 }
 
-.form__select-wrap::after {
+.page-contact__select-wrap::after {
   position: absolute;
   right: rem(8);
-  top: rem(1);
+  top: 25%;
   width: rem(12);
   height: rem(12);
   content: url(../images/common/icon_contact.svg);
   display: block;
 
   @include mq('md') {
-    right: rem(8);
+    right: rem(16);
     top: 25%;
     transform: translateY(-25%);
   }
 }
 
-.form__button {
-  margin-top: rem(24);
-  text-align: center;
-
-  @include mq('md') {
-    margin-top: rem(40);
-  }
+// 同意
+.page-contact__agree label {
+  display: inherit;
 }
 
 // =====================

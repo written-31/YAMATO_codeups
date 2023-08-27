@@ -1,9 +1,9 @@
 @use 'global' as *;
-.page-terms {
+.page-terms-of-service {
   position: relative;
 }
 
-.page-terms::before {
+.page-terms-of-service::before {
   position: absolute;
   display: inline-block;
   content: "";
@@ -24,58 +24,48 @@
 }
 
 
-.page-terms__inner {
+.page-terms-of-service__inner {
   display: flex;
   justify-content: center;
 }
 
-.page-terms__title {
+.page-terms-of-service__title {
   font-size: rem(24);
   font-weight: $regular;
   color: $color-main;
+  text-indent: 1rem;
 
   @include mq('md') {
     font-size: rem(32);
   }
 }
 
-.page-terms__content {
+.page-terms-of-service__contents {
   width: 100%;
+  @include mq('md') {
+    max-width: rem(800);
+    width: 100%;
+  }
+
+}
+
+.page-terms-of-service__content {
   font-size: rem(16);
   color: $color-main;
   font-weight: $normal;
   line-height: 2;
 
-  @include mq('md') {
-    max-width: rem(800);
-    width: 100%;
+  & div {
+    margin-top: rem(30);
+
+    @include mq('md') {
+      margin-top: rem(40);
+    }
   }
-}
 
-.page-terms__text {
-  margin-top: rem(40);
-  
-}
-
-.page-terms__text--first{
-  margin-top: rem(30);
-}
-
-.page-terms__items {
-  margin-top: rem(35);
-  padding-left: 1em;
-  list-style: decimal;
-
-  @include mq('md') {
-    margin-top: rem(35);
+  & ol {
+    padding-left: 1em;
+    list-style: decimal;
   }
-}
-
-.page-terms__items--mt0 {
-  margin-top: 0;
-}
-
-.page-terms__item {
-
 }
 

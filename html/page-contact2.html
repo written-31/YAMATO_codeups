@@ -1,0 +1,94 @@
+<?php get_header(); ?>
+
+<main>
+  <div class="sub-fv">
+    <div class="sub-fv__bg">
+      <picture>
+        <!-- ↓幅768px以上で表示↓ -->
+        <source srcset="<?php echo get_theme_file_uri() ?>/dist/assets/images/common/contact-bg_pc.jpg" media="(min-width: 768px)" />
+        <!-- ↓上記全て表示条件に当てはまらない場合に表示↓ -->
+        <img src="<?php echo get_theme_file_uri() ?>/dist/assets/images/common/contact-bg_sp.jpg" alt="コンタクトページのページのファーストビュー">
+      </picture>
+    </div>
+    <h2 class="sub-fv__text">Contact</h2>
+  </div>
+  <!-- /fv -->
+  <?php get_template_part('breadcrumb'); ?>
+
+
+  <section class="page-contact l-page-contact">
+    <div class="page-contact__inner inner">
+      <div class="page-contact__form">
+        <p class="form__error">※必須項目が入力されていません。入力してください。</p>
+        <table class="contact-table">
+          <tr class="contact-table__row">
+            <th>お名前<span class="contact-table__required">必須</span></th>
+            <td><input type="text" name="user_name" size="60" placeholder="山田 太郎"></td>
+          </tr>
+          <tr class="contact-table__row">
+            <th>メールアドレス<span class="contact-table__required">必須</span></th>
+            <td><input type="email" name="email" size="60" placeholder="example@gmail.com"></td>
+          </tr>
+          <tr class="contact-table__row">
+            <th>電話番号<span class="contact-table__required">必須</span></th>
+            <td><input type="tel" name="tel" size="60" placeholder="0311112222"></td>
+          </tr>
+          <tr class="contact-table__row">
+            <th>お問い合わせ種別<span class="contact-table__required">必須</span></th>
+            <td>
+              <div class="contact-table__check">
+                <span>
+                  <label>
+                    <input type="checkbox" name="type" value="製品について" checked="checked">
+                    <span>製品について</span>
+                  </label>
+                </span>
+                <span>
+                  <label>
+                    <input type="checkbox" name="type" value="お取引について">
+                    <span>お取引について</span>
+                  </label>
+                </span>
+                <span>
+                  <label>
+                    <input type="checkbox" name="type" value="その他">
+                    <span>その他</span>
+                  </label>
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr class="contact-table__row">
+            <th>会社名</th>
+            <td class="page-contact__select-wrap">
+              <select name="select">
+                <option value="1">キャンペーン内容を選択</option>
+                <option value="2">キャンペーン内容を選択</option>
+                <option value="3">キャンペーン内容を選択</option>
+              </select><!-- / -->
+            </td>
+          <tr class="contact-table__row">
+            <th>お問い合わせ内容<span class="contact-table__required">必須</span></th>
+            <td><textarea name="content_detail"></textarea></td>
+          </tr>
+        </table>
+
+        <div class="page-contact__agree">
+          <label>
+            <input type="checkbox" name="agree" value="個人情報の取り扱いについて同意のうえ送信します。">
+            <span class="page-contact__agree-btn">個人情報の取り扱いについて同意のうえ<br class="u-mobile">
+              送信します。</span>
+          </label>
+        </div>
+        <div class="page-contact__button">
+          <div>
+            <button type="submit" name="submitBack" value="back" class="button02">←入力画面へ戻る</button>
+            <button type="submit" name="submitConfirm" value="confirm" class="button01">確認画面へ→</button>
+          </div>
+          <button type="submit" name="submit" value="send" class="btn slide button01"><span></span>Send</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <?php get_footer(); ?>

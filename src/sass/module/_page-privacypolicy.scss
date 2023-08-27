@@ -1,9 +1,9 @@
 @use 'global' as *;
-.page-privacy {
+.page-privacypolicy {
   position: relative;
 }
 
-.page-privacy::before {
+.page-privacypolicy::before {
   position: absolute;
   display: inline-block;
   content: "";
@@ -24,27 +24,24 @@
 }
 
 
-.page-privacy__inner {
+.page-privacypolicy__inner {
   display: flex;
   justify-content: center;
 }
 
-.page-privacy__title {
+.page-privacypolicy__title {
   font-size: rem(24);
   font-weight: $regular;
   color: $color-main;
+  text-indent: 1rem;
 
   @include mq('md') {
     font-size: rem(32);
   }
 }
 
-.page-privacy__content {
+.page-privacypolicy__contents {
   width: 100%;
-  font-size: rem(16);
-  color: $color-main;
-  font-weight: $normal;
-  line-height: calc(32/16);
 
   @include mq('md') {
     max-width: rem(800);
@@ -52,36 +49,24 @@
   }
 }
 
-.page-privacy__text {
-  margin-top: rem(31);
+.page-privacypolicy__content {
+  font-size: rem(16);
+  color: $color-main;
+  font-weight: $normal;
+  line-height: calc(32/16);
 
-  @include mq('md') {
-    margin-top: rem(35);
+  & div {
+    margin-top: rem(30);
+
+    @include mq('md') {
+      margin-top: rem(40);
+    }
   }
-}
 
-.page-privacy__items {
-  // margin-top: rem(30);
-  padding-left: 1em;
-  list-style: decimal;
-
-  @include mq('md') {
-    // margin-top: rem(40);
+  & ol {
+    padding-left: 1em;
+    list-style: decimal;
   }
-}
-.page-privacy__items--first {
-  margin-top: rem(33);
-
-  @include mq('md') {
-    margin-top: rem(40);
-  }
-}
-
-.page-privacy__items--mt0 {
-  margin-top: 0;
-}
-
-.page-privacy__item {
 
 }
 

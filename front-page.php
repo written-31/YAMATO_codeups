@@ -380,78 +380,29 @@
           </picture>
         </div>
         <div class="price__items">
-          <div class="price__item">
-            <h3 class="price__sub-title">ライセンス講習</h3><!-- /price__sub-title -->
-            <dl>
-              <div class="price__entry">
-                <dt class="price__name">オープンウォーターダイバーコース</dt>
-                <dd class="price__value">¥50,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">アドバンスドオープンウォーターコース</dt>
-                <dd class="price__value">¥60,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">レスキュー＋EFRコース</dt>
-                <dd class="price__value">¥70,000</dd>
-              </div>
-            </dl>
-          </div><!-- /price__item -->
-          <div class="price__item">
-            <h3 class="price__sub-title">体験ダイビング</h3><!-- /price__sub-title -->
-            <dl>
-              <div class="price__entry">
-                <dt class="price__name">ビーチ体験ダイビング(半日)</dt>
-                <dd class="price__value">¥7,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">ビーチ体験ダイビング(1日)</dt>
-                <dd class="price__value">¥14,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">ボート体験ダイビング(半日)</dt>
-                <dd class="price__value">¥10,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">ボート体験ダイビング(1日)</dt>
-                <dd class="price__value">¥18,000</dd>
-              </div>
-            </dl>
-          </div><!-- /price__item -->
-          <div class="price__item">
-            <h3 class="price__sub-title">ファンダイビング</h3><!-- /price__sub-title -->
-            <dl>
-              <div class="price__entry">
-                <dt class="price__name">ビーチダイビング(2ダイブ)</dt>
-                <dd class="price__value">¥14,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">ボートダイビング(2ダイブ)</dt>
-                <dd class="price__value">¥18,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">スペシャルダイビング(2ダイブ)</dt>
-                <dd class="price__value">¥24,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">ナイトダイビング(1ダイブ)</dt>
-                <dd class="price__value">¥10,000</dd>
-              </div>
-            </dl>
-          </div><!-- /price__item -->
-          <div class="price__item">
-            <h3 class="price__sub-title">スペシャルダイビング</h3><!-- /price__sub-title -->
-            <dl>
-              <div class="price__entry">
-                <dt class="price__name">貸切ダイビング(2ダイブ)</dt>
-                <dd class="price__value">¥24,000</dd>
-              </div>
-              <div class="price__entry">
-                <dt class="price__name">1日ダイビング(3ダイブ)</dt>
-                <dd class="price__value">¥32,000</dd>
-              </div>
-            </dl>
-          </div><!-- /price__item -->
+          <?php
+          for ($i = 1; $i <= 4; $i++) {
+            $field_name = 'price-plan_' . $i;
+            $price_plans = SCF::get($field_name,64);
+
+            if ($price_plans) :
+              $plan_title = SCF::get('plan_' . $i,64); // SCFで設定したタイトルを取得
+          ?>
+            <div class="price__item">
+              <h3 class="price__sub-title"><?php echo esc_html($plan_title); ?></h3><!-- /price__sub-title -->
+              <dl>
+                <?php foreach ($price_plans as $plan) : ?>
+                  <div class="price__entry">
+                    <dt class="price__name"><?php echo esc_html($plan['title_' . $i]); ?></dt>
+                    <dd class="price__value"><?php echo esc_html($plan['price_' . $i]); ?></dd>
+                  </div>
+                <?php endforeach; ?>
+              </dl>
+            </div><!-- /price__item -->
+          <?php
+            endif;
+          }
+          ?>
         </div><!-- /price__items -->
       </div><!-- /price__wrapper -->
       <div class="price__btn">

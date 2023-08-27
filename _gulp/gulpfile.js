@@ -161,7 +161,8 @@ const jsBabel = () => {
 // ブラウザーシンク
 const browserSyncOption = {
   notify: false,
-  server: "../dist/",
+  // server: "../dist/",
+  proxy: "yamatocodeups.local",
 };
 const browserSyncFunc = () => {
   browserSync.init(browserSyncOption);
