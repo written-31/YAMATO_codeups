@@ -59,12 +59,12 @@
   color: #fff;
   font-weight: $normal;
   font-size: rem(16);
-  padding: rem(16) rem(16) rem(15);
+  padding: rem(16) rem(60) rem(16) rem(15);
   cursor: pointer;
   transition: .3s;
 
   @include mq('md') {
-    padding: rem(25) rem(40);
+    padding: rem(25) rem(87) rem(25) rem(40);
     font-size: rem(20);
   }
 }

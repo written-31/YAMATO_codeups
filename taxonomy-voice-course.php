@@ -27,7 +27,7 @@
 
           <li class="common-tabs__tab"><a href="<?php echo esc_url(get_post_type_archive_link('voice')); ?>">ALL</a></li>
           <?php
-          $taxonomy_terms = get_terms('course', array('hide_empty' => false));
+          $taxonomy_terms = get_terms('voice-course', array('hide_empty' => false));
           foreach ($taxonomy_terms as $taxonomy_term) :
           ?>
             <li class="common-tabs__tab <?php
